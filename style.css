@@ -2,6 +2,10 @@
 
 p {
     text-align: justify;
+    text-align: left;
+   /* margin-top: 5px;*/
+   /* padding-top: 10px; */
+
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -18,6 +22,8 @@ h1 {
 a {
     color: #17AB33;
     font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 a:after {
@@ -28,13 +34,24 @@ a:active {
     color: white;
 }
 
-.button {
+button {
     font-style: italic;
     font-weight: bolder;
     text-decoration: underline;
+    font-size: 20px;
+    
 }
 
+/***
 li::marker {
     color: red ;
 
+}
+***/
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 40px;
 }
