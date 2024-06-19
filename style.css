@@ -1,0 +1,40 @@
+@import url();
+
+p {
+    text-align: justify;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #370050;
+
+}
+
+h1 {
+   /** line-height: 2px; **/
+    font-size: 60px;
+    text-decoration: solid underline overline;
+}
+
+a {
+    color: #17AB33;
+    font-size: 22px;
+}
+
+a:after {
+    color: red;
+}
+
+a:active {
+    color: white;
+}
+
+.button {
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+li::marker {
+    color: red ;
+
+}
