@@ -1,59 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portofoliu</title>
-</head>
-<header>
+  </head>
+  <header>
     <h1>My portofoliu</h1>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact</a>
+      <a href="about.html" target="_blank">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Project</a>
+      <a href="#contact">Contact</a>
     </nav>
     <main>
-        <section id="home"></section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt neque numquam inventore perferendis quaerat esse quis, excepturi nobis a tenetur officia dolorem ratione minus impedit error provident eveniet harum similique!</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>CRO</li>
-                <li>REACT</li>
-            </ul>
-        </section>
-        <section id="project">
-            <h2>Project</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, officiis. Impedit maiores dolorem possimus dolorum? Voluptate delectus excepturi dicta amet, ab voluptatem veniam nostrum exercitationem ipsam. Esse nobis ad eius?</p>
-            <ul>
-                <li>Retete</li>
-                <li>Tari Vizitate</li>
-                <li>Portofoliu</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="">
-              <label for="name" >Enter Name</label>  <input name="name" placeholder="Numele si Prenumele" type="text" required>
-               <label for="number" >Enter Mobile Phone</label> <input name="mobile" type="number" required>
-                <label for="email"></label>Enter Email<input name="email" type="email" required>
-                <label for="motiv">Motivul angajari?
-                    <select id="motiv" name="motiv">
-                      <option value="">(select one)</option>
-                      <option value="1">Interviu</option>
-                      <option value="2">Angajare</option>
-                    </select>
-                  </label>
-                <label for="commnet">Enter Comment</label> <textarea name="comment" id="commnet"></textarea>
-            </form>
-        </section>
+      
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>
+          Sunt software developer la Orange Systems, cu specializarea în
+          Conversion Rate Optimization (CRO) development. Lucrez la un proiect
+          din Marea Britanie (telecomunicaţii) cu o echipă de dezvoltatori web
+          și designeri în misiunea de a crea experiențe web captivante și
+          accesibile, care răspund nevoilor și așteptările utilizatorilor și
+          clienților.
+        </p>
+        <h3>Here is a list of my <strong>hard skills:</strong></h3>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>SQL</li>
+          <li>Google Console</li>
+          <li>BgQuery</li>
+          <li>Python</li>
+        </ul>
+        <h3>Here is a list of my <strong>soft skills:</strong></h3>
+        <ul>
+          <li>3 limbi vorbite: Româna, Engleza, Rusa</li>
+          <li>Managementul timpului</li>
+          <li>Gândire creativă</li>
+          <li>Învăţare continuă</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Project</h2>
+        <p>
+          Am lucrat la diverse proiecte web, dezvoltând aplicații interactive și
+          platforme online care au avut un impact semnificativ asupra
+          utilizatorilor. Aceste proiecte au demonstrat abilitățile mele în
+          dezvoltarea front-end și back-end, utilizând o varietate de tehnologii
+          moderne și abordări inovatoare.
+        </p>
+        <table>
+          <th>Travel Journal App</th>
+          <th>Culinary Recipes App</th>
+          <th>Portofoliu Personal</th>
+          <tr>
+            <td>
+              <a href="projects/country/index.html">
+              <img
+                src="images/visit.jpg"
+                ref="portofoliu/country/index.html#home"
+                alt="website-project1"
+                width="300px"
+                height="200px"
+              /></a>
+            </td>
+            <td>
+              <a href="projects/reteta/index.html">
+              <img
+                src="images/Culinary.jpg"
+                alt="website-project1"
+                width="300px"
+                height="200px"
+              /></a>
+            </td>
+            <td>
+              <a href="projects/portofoliu/index.html">
+              <img
+                src="images/portofoliu.jpg"
+                alt="website-project1"
+                width="300px"
+                height="200px"
+              /></a>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section id="contact">
+        <h2>Contacte</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit
+          amet feugiat libero. Sed condimentum hendrerit pretium. Duis velit
+          erat, interdum at lorem vitae, laoreet tincidunt dolor. Nulla
+          facilisis enim a mi ultrices sagittis. Praesent nec augue in lectus
+          tristique lacinia sed ut dui. Duis.
+        </p>
+        <p>
+          <img src="images/person-icon.png" alt="person icon" width="40" />Chicu
+          Roman, +373 68889505
+        </p>
+        <p>
+          <img src="images/pin-icon.png" alt="pin icon" width="40" />Chişinău,
+          Moldova
+        </p>
+        <p>
+          <img
+            src="images/email-icon.png"
+            alt="email icon"
+            width="40"
+          />romachicu@gmail.com
+        </p>
+        <form>
+          <h3>Scrieţi-mi un mesaj:</h3>
+          <input name="name" placeholder="Numele*" required />
+          <input
+            name="tel"
+            type="number"
+            placeholder="Tel:*"
+            required
+            minlength="9"
+          />
+          <input name="email" type="email" placeholder="Email*" required />
+          <br /><br />
+          <lable for="motiv">De ce doriţi să mă contactaţi:</lable><br /><br />
+          <select name="motiv">
+            <option value="">--Selectaţi o opţiune--</option>
+            <option value="interviu">Interviu</option>
+            <option value="job offer">Job Offer</option></select
+          ><br /><br />
+          <textarea
+            name="mesaj"
+            placeholder="Detalii"
+            cols="60"
+            rows="5"
+          ></textarea>
+          <br /><br />
+          <button>Trimite</button>
+        </form>
+      </section>
     </main>
-</header>
-<body>
-    
-</body>
+  </header>
+
+  <footer>
+    <hr />
+    &copy; 2024 My Portfolio. All rights reserved.<img
+      src="images/orange systems logo.png"
+      alt="orange systems logo"
+      width="90"
+    />
+  </footer>
+  <body></body>
 </html>
