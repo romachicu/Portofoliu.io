@@ -1,0 +1,64 @@
+/* Resetează marginile și spațierile implicite */
+/* Sablon https://framer.com/projects/about-html--001szsyrdZN2iXAx8ZNF-ewqlA?node=augiA20Il */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* Înălțimea containerului să fie aceeași cu înălțimea viewport-ului */
+}
+
+.image-container {
+    position: fixed;
+    /* Fixează imaginea în partea stângă */
+    top: 0;
+    left: 0;
+    width: 50vw;
+    /* 50% din lățimea viewport-ului */
+    height: 100%;
+    /* 100% din înălțimea viewport-ului */
+    overflow: hidden;
+    /* Ascunde orice parte a imaginii care depășește containerul */
+}
+
+.image-container img {
+    height: 100%;
+    width: auto;
+    /* Păstrează proporțiile imaginii */
+}
+
+.text-container {
+    margin-left: 50%;
+    /* Asigură că textul începe după imagine */
+    width: 50vw;
+    /* Ocupă restul de 50% din lățimea viewport-ului */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #F29494;
+    font-size: 64px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+}
