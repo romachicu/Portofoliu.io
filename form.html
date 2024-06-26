@@ -1,56 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/form.css">
-</head>
-<body>
-    <div class="contact-form">
-        <h1>Contact Us</h1>
-        <form action="#" method="post">
-            <div class="form-row">
-                <div class="form-column">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Your name...">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="styles/form.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                placeholder="Your name..."
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                placeholder="Your last name..."
+                            />
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Your last name...">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email..."
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Your phone number..."
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="form-column">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email...">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your phone number...">
+                <div class="form-group InputInfo">
+                    <label for="country">Country</label>
+                    <div class="custom-select-wrapper">
+                        <select class="custom-select" id="country-select">
+                            <option value="md" data-flag="fi fi-md">
+                                Moldova
+                            </option>
+                            <option value="ro" data-flag="fi fi-ro">
+                                Romania
+                            </option>
+                            <option value="us" data-flag="fi fi-us">
+                                United States
+                            </option>
+                            <option value="gb" data-flag="fi fi-gb">
+                                United Kingdom
+                            </option>
+                            <option value="fr" data-flag="fi fi-fr">
+                                France
+                            </option>
+                            <option value="de" data-flag="fi fi-de">
+                                Germany
+                            </option>
+                        </select>
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="">-- Select your country --</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Your address...">
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something..."></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-</body>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder="Your address..."
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <textarea
+                        id="subject"
+                        name="subject"
+                        placeholder="Write something..."
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                function formatState(state) {
+                    if (!state.id) {
+                        return state.text;
+                    }
+                    var baseUrl =
+                        "https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/";
+                    var flagUrl =
+                        baseUrl + state.element.value.toLowerCase() + ".svg";
+                    var $state = $(
+                        '<span><img src="' +
+                            flagUrl +
+                            '" class="img-flag" /> ' +
+                            state.text +
+                            "</span>",
+                    );
+                    return $state;
+                }
+
+                $("#country-select").select2({
+                    templateResult: formatState,
+                    templateSelection: formatState,
+                    minimumResultsForSearch: -1, // Optional: to disable the search box
+                });
+            });
+        </script>
+    </body>
 </html>

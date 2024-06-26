@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d8b4e2;
+    background-color: #E9EBDE;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,17 +10,17 @@ body {
 }
 
 .contact-form {
-    background-color: #fff;
+    background-color: #DBEAE3;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 80%;
 }
 
 .contact-form h1 {
     text-align: center;
     color: #fff;
-    background-color: #d8b4e2;
+    background-color: #B0BCC8;
     margin: -20px -20px 20px -20px;
     padding: 20px;
     border-radius: 8px 8px 0 0;
@@ -65,7 +65,7 @@ body {
 .form-group button {
     width: 100%;
     padding: 10px;
-    background-color: #5c209e;
+    background-color: #464147;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -74,11 +74,42 @@ body {
 }
 
 .form-group button:hover {
-    background-color: #3a1375;
+    background-color: #63C4D4;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-    background-color: #af87da;
+    background-color: #63C4D4;
+    border-radius: 10px;
+}
+
+.select2-container--default .select2-selection--single {
+    display: flex;
+    align-items: center;
+    background-color: #63C4D4;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    display: flex;
+    align-items: center;
+    background-color: #63C4D4;
+}
+
+.select2-container--default .select2-results__option {
+    display: flex;
+    align-items: center;
+    background-color: #63C4D4;
+}
+
+.select2-container--default .select2-results__option span {
+    margin-right: 0;
+    background-color: #63C4D4;
+}
+
+.img-flag {
+    width: 4%;
+    height: 4%;
+    margin-top: 1px;
+    background-color: #63C4D4;
 }
