@@ -37,6 +37,7 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+    padding: 6px;
 }
 
 .form-group label {
@@ -74,7 +75,7 @@ body {
 }
 
 .form-group button:hover {
-    background-color: #63C4D4;
+    background-color: #3a1375;
 }
 
 .form-group input,
@@ -85,6 +86,10 @@ body {
 }
 
 .select2-container--default .select2-selection--single {
+    height: 3%;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     background-color: #63C4D4;
@@ -110,6 +115,6 @@ body {
 .img-flag {
     width: 4%;
     height: 4%;
-    margin-top: 1px;
+    margin-right: 0;
     background-color: #63C4D4;
 }
