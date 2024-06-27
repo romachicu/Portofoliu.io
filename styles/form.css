@@ -105,11 +105,13 @@ body {
     display: flex;
     align-items: center;
     background-color: #63C4D4;
+    
 }
 
 .select2-container--default .select2-results__option span {
     margin-right: 0;
     background-color: #63C4D4;
+    
 }
 
 .img-flag {
