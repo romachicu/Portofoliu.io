@@ -1,5 +1,6 @@
 /* Resetează marginile și spațierile implicite */
 /* Sablon https://framer.com/projects/about-html--001szsyrdZN2iXAx8ZNF-ewqlA?node=augiA20Il */
+/* Icon from https://www.onlinewebfonts.com/icon/598338 */
 
 * {
     margin: 0;
@@ -30,6 +31,7 @@ html {
     /* 100% din înălțimea viewport-ului */
     overflow: hidden;
     /* Ascunde orice parte a imaginii care depășește containerul */
+     filter: brightness(0.8)
 }
 
 .image-container img {
@@ -39,7 +41,7 @@ html {
 }
 
 .text-container {
-    margin-left: 50%;
+    margin-left: 45%;
     /* Asigură că textul începe după imagine */
     width: 50vw;
     /* Ocupă restul de 50% din lățimea viewport-ului */
@@ -84,6 +86,26 @@ h3 {
 }
 
 section {
-    padding-top: 50px;
+    padding-top: 10%;
     
+}
+
+.container-skill {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* ajustați în funcție de dimensiunea dorită */
+    margin: 5%;
+}
+
+
+.box {
+   /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+.small {
+    width: calc(20% - 5%); /* ajustați în funcție de distanța dorită între elemente */
+    height: 5%; /* ajustați în funcție de dimensiunea dorită */
+    margin-right: 6px;
+    transform: translateY(10%);
 }
