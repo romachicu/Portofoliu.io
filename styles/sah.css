@@ -1,0 +1,65 @@
+body {
+    background: #fff5;
+  }
+  
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: black;
+  }
+  
+  td {
+    height: 80px;
+    width: 80px;
+    background-color: gray;
+    font-size: 48px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  tr:nth-child(odd) td:nth-child(even),
+  tr:nth-child(even) td:nth-child(odd) {
+    background: white;
+  }
+  
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alf {
+    background-color: #fff; 
+    font-size: 25px;
+    margin: auto;
+  }
+
+  
+
+  td:hover {
+    background-color: yellow;
+  }
+
+  td:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+    
+  }
+
+  td:after {
+    content: attr(title);
+    max-width: 200px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    padding:  0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    z-index: 99999;
+    visibility: hidden;
+    font-size: 15px;
+   }

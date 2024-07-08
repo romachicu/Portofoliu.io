@@ -34,8 +34,17 @@ a:after {
     color: red;
 }
 
+a:after {
+    content: "|";
+    color: indigo;
+}
+
 a:active {
     color: white;
+}
+a::before{
+    content: "->";
+    color: #ff0000;
 }
 
 button {
@@ -52,11 +61,28 @@ li::marker {
 
 }
 ***/
+/***
 ul {
     list-style-type: none;
 }
-
+***/
 h2 {
     font-size: 40px;
     line-height: 2px;
+}
+
+
+p::first-letter {
+    font-size: 40px;
+}
+
+li::marker {
+   /* content: url("/icon/checkmaker.svg"); */
+    color: #17AB33;
+    font-size: 20px;
+}
+
+li:nth-last-child(1)
+{
+    color: #ff0000;
 }

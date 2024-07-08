@@ -1,17 +1,31 @@
-body, html {
+
+html, body {
     height: 100%;
     margin: 0;
-  }
-  
-  .page-img {
-    /* The image used */
-    background-image: url("images/child_03.jpg");
-  
-    /* Full height */
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+
+body {
+    background: url('/images/ufo_07.jpg'); 
     background-size: cover;
+    display: flex;
+ 
+
+   }
+
+/* Style the h1 */
+h1 {
+    color: white;
+    font-size: 200px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: -2s;
+    bottom: 8px;
   }
+  
+  @keyframes example {
+    0%   {background-color:red; left:0px; bottom:0px;}
+    50% {background-color:red; left:0px; bottom:50px;}
+    100% {background-color:red; left:0px; bottom:100px;}
+  }
+
