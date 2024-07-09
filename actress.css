@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  background-color: #f0f0f0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  gap: 16px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 32px);
+  box-sizing: border-box;
+}
+
+.profile_img {
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+}
+h3 {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.name {
+  text-align: left; 
+ /* background-color: #fff000; */
+}
+
+.winner {
+  text-align: right;
+  color: green;
+  font-size: 10px;
+   font-weight: bold;
+}
+
+.film-info {
+  Display: flex;
+  justify-content: space-between;
+}
+
+.move_container {
+  Display: block;
+  text-align: left;
+ 
+}
+
+.movie {
+  width: 60%;
+  height: 100%;
+  
+}
+
+.move_desc {
+  flex-grow: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+ /* background-color: red; */
+  width: 100%;
+  
+}
+
+
+h4{
+  font-size: 12px;
+  justify-content: center;
+}
+
+p {
+  font-size: 8px;
+}
+.movie-info {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo_imbd {
+ /* background-color: green; */
+  order:1;
+  align-self: end;
+}
+.logo_imbd_img {
+  width: 40px;
+  height: 15px;}
+
+
+.nomination {
+  color: #e5af0e;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.actor-content {
+  text-align: left;
+  font-size: 12px;
+}
+.move-content {
+  text-align: left;
+  font-size: 10px;
+}
+
+.award {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+.oscar_avard_logo {
+  width: 20px;
+  height: 50px;
+}
+
+
+.not-winner {
+  color: #484848;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.debutant {
+  color: #0277bd;
+  text-align: right;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.title-name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 30px;
+  color:#3f9489;
+}
