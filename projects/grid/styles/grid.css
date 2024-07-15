@@ -1,0 +1,41 @@
+.parent {
+    display: grid;
+    border: 7px solid #6d6464;
+    padding: 10px;
+    gap: 10px;
+    grid-template-areas: 
+        'header header header header header header'
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
+}
+
+.child {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.one {
+    background-color: #b2d8d8;
+    grid-area: header;
+}
+
+.two {
+    background-color: #66b2b2;
+    grid-area: menu;
+}
+
+.three {
+    background-color: #008080;
+    grid-area: main;
+}
+
+.four {
+    background-color: #006666;
+    grid-area: right;
+}
+
+.five {
+    background-color: #004c4c;
+    grid-area: footer;
+}

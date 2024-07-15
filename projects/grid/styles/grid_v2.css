@@ -1,0 +1,64 @@
+
+/*body {
+    background-color: #006666;
+}
+*/
+h1 {
+    text-align: center;
+}
+.parent {
+    display: grid;
+    /*border: 7px solid #6d6464; */
+    padding: 10px;
+    gap: 10px;
+    grid-template-areas: 
+        'one two two two two three'
+        'four five five five five six'
+        'seven zero zero zero zero zero';
+}
+
+.child {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.unu {
+    background-color: #b2d8d8;
+    grid-area: one;
+}
+
+.doi {
+    background-color: #3dbdbd;
+    grid-area: two;
+}
+
+.trei {
+    background-color: #219c9c;
+    grid-area: three;
+}
+
+.patru {
+    background-color: #006666;
+    grid-area:  four;
+}
+
+.cinci {
+    background-color: #4c8383;
+    grid-area: five;
+}
+
+.sase {
+    background-color: #4c8383;
+    grid-area: six;
+}
+
+.sapte {
+    background-color: #4c8383;
+    grid-area: seven;
+}
+
+.zero {
+    background-color: #4c8383;
+    grid-area: zero;
+}
