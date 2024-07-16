@@ -15,6 +15,9 @@ body{
 
 header {
     background-image: url("img/header-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 600px;
     width: 100%;
     display: flex;
@@ -92,10 +95,10 @@ h2 {
 h3 {
     font-size: 20px;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
 }
 p {
-    padding: 10px;
+    padding: 20px;
 }
 
 .product-price {
@@ -113,15 +116,93 @@ p {
 .product-price span:before{ content:'$'; }
 /*.product-price span:after{ content: '.00'; }*/
 
+.product-badge{
+    width: 20%;
+    background-color: orange;
+    color: white;
+    align-self: flex-end;
+    border-radius: 5px;
+    margin: -10px -10px -19px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+
+}
+
 .product-options {
     display: flex;
-    justify-content: space-between;
-    margin: auto;
+    justify-content: space-around;
+    
+    
 }
 
 .product-options .option {
         display: flex;
-        flex-direction: column;}
+        flex-direction: column;
+        width: calc(45%);
     
-
+    }
+.number-input {
+            display: inline-flex;
+            align-items: center;
+        }
+.number-input button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
         
+.number-input button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+.number-input .minus {
+            border-radius: 5px 0 0 5px;
+        }
+        
+.number-input .plus {
+            border-radius: 0 5px 5px 0;
+        }
+        
+.number-input input[type=number] {
+            border: 1px solid #ddd;
+            border-width: 1px 0;
+            text-align: center;
+            width: 50px;
+            height: 30px;
+            font-size: 16px;
+            margin: 0 -1px;
+        }
+.button-shop {
+        cursor: pointer; 
+        padding: 10px;
+        margin-top: 40px; 
+        background-color: #f39c12;
+        border-radius: 5px; 
+        border: none; 
+        color: white;  
+        font-weight: bold; 
+        font-size: 20px;
+        
+        
+}
+.product-details {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    width: 90%;
+}
+
+span {
+    font-size: 25px;
+}
