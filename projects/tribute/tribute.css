@@ -1,0 +1,200 @@
+.biography {
+  margin: 20px;
+  display: grid;
+}
+
+.cadran {
+
+  margin: 20px;
+  top: 20px;
+}
+
+
+
+header {
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+body {
+  margin-top: 50px;
+}
+
+a {
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: red;
+}
+
+section {
+  margin: 35px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  text-align: center;
+  margin: 10px;
+
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  flex: 1 1 calc(50% - 10px);
+  box-sizing: border-box;
+}
+
+.img_card {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+table {
+
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sign {
+  width: 150px;
+  height: 40px;
+}
+
+.link-award {
+  color: #000;
+  font-size: 15px;
+}
+
+.title-description {
+  font-weight: bold;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+footer {
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  color: #f1f1f1;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+
+}
+
+footer svg {
+  transform: rotate(180deg);
+  fill: #fff;
+}
+
+h1 {
+  margin: 20px;
+  padding: 20px;
+  font-size: 35px;
+}
+
+.title-section {
+  margin: 20px;
+  padding: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  position: relative;
+  padding: 10px 20px 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 5em;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #ccc;
+}
+
+blockquote:after {
+  content: close-quote;
+  font-size: 5em;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  color: #ccc;
+}
+
+.manhatan-project {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column test {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.test {
+  width: 480px;
+  height: 350px;
+}
