@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+p {
+  text-align: justify;
+  text-align: left;
+  /* margin-top: 5px;*/
+  /* padding-top: 10px; */
+
+}
+
+h1,h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #370050;
+
+}
+
+h1 {
+  /** line-height: 2px; **/
+  font-size: 70px;
+  text-decoration: solid underline overline;
+  padding: 20px;
+  margin: 20px;
+  color: #EEEEEE;
+  margin-top: 30px;
+}
+
+a {
+  color: #76ABAE;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:after {
+  color: red;
+}
+
+
+
+a:active {
+  color: white;
+}
+
+
+button {
+  font-style: italic;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 20px;
+
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 2px;
+}
+
+
+p::first-letter {
+  font-size: 40px;
+}
+
+li::marker {
+ /* content: url("/icon/checkmaker.svg"); */
+  color: #254336;;
+  font-size: 20px;
+}
+
+li:nth-last-child(1)
+{
+  color: #ff0000;
+}
+
+
+li a, .dropbtn {
+  display: inline-block;
+  color: #76ABAE;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #000;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.focus:hover {
+  background-color: #000;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #76ABAE;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: -5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #254336;
+}
+
+.menu {
+  height: 50px;
+  margin: 0;
+  background-color: #254336;
+ /* content: url('icon/menu_30dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+
+  margin-left: 0; */
+}
+
+header {
+  background-color: #222831;
+  position: fixed;
+  width: 100%;
+  margin-top: -40px;
+}
+
+main {
+  padding-top: 180px;
+  margin-left: 20px;
+}
+
+.ull {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+.lii {
+  float: left;
+}
+
+.menu-icon {
+  content: url('icon/menu_30dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg');
+  height: 50px;
+}
