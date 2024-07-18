@@ -6,8 +6,7 @@
 
 body {
   margin: 0;
-  font-family: Arial;
-  
+  font-family: Arial, sans-serif;
 }
 
 .header {
@@ -15,7 +14,7 @@ body {
   padding: 32px;
 }
 
-/* Create two equal columns that floats next to each other */
+
 .column {
   float: left;
   width: 50%;
@@ -24,9 +23,11 @@ body {
 
 .column img {
   margin-top: 12px;
+  display: block;
+  position: relative;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -36,6 +37,8 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 h1 {
@@ -46,4 +49,38 @@ h1 {
 
 img {
   width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-container:after {
+  content: attr(title);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+  height: 100px;
+  font-size: 50px;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+
+.img-container:hover:after {
+  visibility: visible;
+  opacity: 1;
 }
