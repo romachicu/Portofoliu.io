@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>My Portofoliu</title>
+    <link rel="stylesheet" href="about.css" />
+    <title>About</title>
   </head>
-  <header>
-    <h1>My Portofoliu</h1>
-    <nav>
-      <a href="about.html" target="_blank">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Project</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <main>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
+  <body>
+    <section id="home">
+      <!--
+      <h2>About ME</h2>
+      -->
 
+      <div class="image-container">
+        <img src="images/roman.jpg" alt="Descrierea imaginii" />
+      </div>
+      <div class="text-container">
+        <!--<p>Salut, ma numesc</p> -->
+        <br />
+        <h3>CHICU ROMAN</h3>
+        <br />
+        <p>
             Sunt un Web Developer pasionat și dedicat, cu o experiență solidă în
           dezvoltarea și întreținerea aplicațiilor web moderne. Am abilități
           avansate în HTML, CSS, JavaScript și diverse framework-uri front-end
@@ -26,127 +28,37 @@
           include lucrul cu baze de date SQL și NoSQL, precum și integrarea
           API-urilor RESTful și GraphQL.
         </p>
-        <h3>Here is a list of my <strong>hard skills:</strong></h3>
-        <ul>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
-          <li>Google Console</li>
-          <li>BgQuery</li>
-          <li>Python</li>
-        </ul>
-        <h3>Here is a list of my <strong>soft skills:</strong></h3>
-        <ul>
-          <li>3 limbi vorbite: Româna, Engleza, Rusa</li>
-          <li>Managementul timpului</li>
-          <li>Gândire creativă</li>
-          <li>Învăţare continuă</li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>Project</h2>
         <p>
-          Am lucrat la diverse proiecte web, dezvoltând aplicații interactive și
-          platforme online care au avut un impact semnificativ asupra
-          utilizatorilor. Aceste proiecte au demonstrat abilitățile mele în
-          dezvoltarea front-end și back-end, utilizând o varietate de tehnologii
-          moderne și abordări inovatoare.
+            Am un ochi atent pentru detalii și un angajament față de standardele
+          de codare curate și eficiente. De asemenea, am o înțelegere profundă a
+          designului responsive și a accesibilității web, asigurându-mă că
+          aplicațiile dezvoltate sunt accesibile pe toate dispozitivele și
+          pentru toți utilizatorii. Sunt adeptul metodologiilor Agile și am
+          experiență în lucrul în echipe de dezvoltare colaborative pentru a
+          livra proiecte de succes la timp.
         </p>
-        <table>
-          <th>Travel Journal App</th>
-          <th>Culinary Recipes App</th>
-          <th>Portofoliu Personal</th>
-          <tr>
-            <td>
-              <a href="projects/country/index.html">
-                <img
-                  src="images/visit.jpg"
-                  ref="portofoliu/country/index.html#home"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-            <td>
-              <a href="projects/reteta/index.html">
-                <img
-                  src="images/Culinary.jpg"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-            <td>
-              <a href="projects/portofoliu/index.html">
-                <img
-                  src="images/portofoliu.jpg"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-          </tr>
-        </table>
-      </section>
-      <section id="contact">
-        <h2>Contacte</h2>
-        <p>
-          Am lucrat la diverse proiecte web, dezvoltând aplicații interactive și
-          platforme online care au avut un impact semnificativ asupra
-          utilizatorilor. Aceste proiecte au demonstrat abilitățile mele în
-          dezvoltarea front-end și back-end, utilizând o varietate de tehnologii
-          moderne și abordări inovatoare.
-        </p>
-        <p>
-          <img src="icon/avatar.svg" alt="person icon" width="30" />Chicu Roman,
-          +373 68889505
-        </p>
-        <p>
-          <img src="icon/location.svg" alt="pin icon" width="30" />Chişinău,
-          Moldova
-        </p>
-        <p>
-          <img
-            src="icon/mobile.svg"
-            alt="email icon"
-            width="30"
-          />romachicu@gmail.com
-        </p>
-        <form>
-          <h3>Scrieţi-mi un mesaj:</h3>
-          <input name="name" placeholder="Numele*" required />
-          <input
-            name="tel"
-            type="number"
-            placeholder="Tel:*"
-            required
-            minlength="9"
-          />
-          <input name="email" type="email" placeholder="Email*" required />
-          <br /><br />
-          <lable for="motiv">De ce doriţi să mă contactaţi:</lable><br /><br />
-          <select name="motiv">
-            <option value="">--Selectaţi o opţiune--</option>
-            <option value="interviu">Interviu</option>
-            <option value="job offer">Job Offer</option></select
-          ><br /><br />
-          <textarea
-            name="mesaj"
-            placeholder="Detalii"
-            cols="60"
-            rows="5"
-          ></textarea>
-          <br /><br />
-          <button>Trimite</button>
-        </form>
-      </section>
-    </main>
-  </header>
-
-  <footer>
-    <hr />
-    &copy; 2024 My Portfolio. All rights reserved. @
-    <a href="index.html">Roman Chicu</a>
-  </footer>
-  <body></body>
+        <section>
+          <a href="index.html"> <button class="button-home">HOME</button></a>
+          <a href="index.html"
+            ><button class="button-read-more">Read More</button></a
+          >
+        </section>
+        <section>
+          <h2>Skills</h2>
+          <div class="container-skill">
+            <div class="box small"><img src="icon/py_v2.svg" alt="python" /></div>
+            <div class="box small"><img src="icon/sql.svg" alt="sql" /></div>
+            <div class="box small"><img src="icon/database.svg" alt="database" /></div>
+            <div class="box small"><img src="icon/html.svg" alt="html" /></div>
+            <div class="box small"><img src="icon/git.svg" alt="git" /></div>
+            <div class="box small"><img src="icon/gitlab.svg" alt="gitlab" /></div>
+            <div class="box small"><img src="icon/debian.svg" alt="debian" /></div>
+            <div class="box small"><img src="icon/docker.svg" alt="docker" /></div>
+            <div class="box small"><img src="icon/cloud_google.svg" alt="google cloud console" /></div>
+          </div>
+          </p>
+        </section>
+      </div>
+    </section>
+  </body>
 </html>
