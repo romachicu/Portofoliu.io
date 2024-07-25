@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap');
 
+:root {
+    --active_profile_color: #68e0cf;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,7 +42,7 @@ body {
 }
 
 .image-profile {
-    background-image: url('/images/my_photo.jpg');
+    background-image: url('/images/my_photo_back_and_white_avatar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -46,7 +50,14 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--active_profile_color);
+    background-blend-mode: multiply;
+
+
 }
+
+
+
 
 .container .card:not(.fixed-card) {
     margin-left: 50%;
@@ -218,7 +229,7 @@ hr {
     margin-right: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .container {
         flex-direction: column;
     }
