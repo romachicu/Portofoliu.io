@@ -7,31 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <table id="myTable">
-    <tr>
-      <td onclick="showDescription(this)">Cell 1</td>
-      <td onclick="showDescription(this)">Cell 2</td>
-    </tr>
-    <tr>
-      <td onclick="showDescription(this)">Cell 3</td>
-      <td onclick="showDescription(this)">Cell 4</td>
-    </tr>
-  </table>
-  <p id="description"></p>
+  <div id="container">
+    <div id="content">Click the buttons to slide horizontally!</div>
+  </div>
+  <button id="slideLeft" type="button">Slide left</button>
+  <button id="slideRight" type="button">Slide right</button>
+  <script>
+        const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
 
-  <script>function showDescription(cell) {
-    // Resetează culoarea celulelor active
-    const activeCells = document.querySelectorAll('td.active');
-    activeCells.forEach(function(activeCell) {
-      activeCell.classList.remove('active');
-    });
-  
-    // Schimbă culoarea de fundal a celulei selectate
-    cell.classList.add('active');
-  
-    // Afișează descrierea tabelului în paragraful <p> de mai jos
-    const description = document.getElementById('description');
-    description.textContent = 'Descrierea pentru ' + cell.textContent;
-  }</script>
+    buttonRight.onclick = function () {
+      document.getElementById('container').scrollLeft += 20;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('container').scrollLeft -= 20;
+    };
+    </script>
 </body>
 </html>
