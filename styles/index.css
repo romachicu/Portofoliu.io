@@ -39,6 +39,7 @@ body {
     width: 50%;
     z-index: 1;
     background-color: #f9f9f9;
+    
 }
 
 .image-profile {
@@ -72,7 +73,9 @@ body {
     font-size: 50px;
     line-height: 1.2;
     font-weight: 800;
-    color: #fff;
+    /*color: #fff; */
+    /*color: #F29494; */
+    color: red;
     background: #373b40;
     word-break: break-word;
     border-radius: 264px;
@@ -274,15 +277,26 @@ hr {
     padding-top: 20px;
     
 }
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto; 
+    white-space: nowrap; 
+ /*   overflow: hidden; */ 
+}
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
     }
-
+    *{
+        margin: 0;
+        padding: 0;
+    }
     .fixed-card {
         position: static;
         height: auto;
         width: 100%;
+        
     }
 
     .container .card:not(.fixed-card) {
@@ -306,5 +320,49 @@ hr {
     .start-description {
         margin-top: 0;
         position: static;
+    }
+    header {
+        width: 100px; 
+        height: -50px;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .menu-icon {
+        display: block; 
+        height: 50px; 
+        width: 50px; 
+        overflow: hidden; 
+    }
+    .menu-icon h4 {
+        display: none; 
+    }
+    nav {
+        display: none; 
+    }
+    .about-me {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        margin-top: 50px;
+    }
+
+    .about-me-description {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .experience-container {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+         }
+    .experience-card {
+        margin-top: 50px;
+        margin-left:0;
     }
 }
