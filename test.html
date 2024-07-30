@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Cell Click</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/library/loading-bar.css">
+  <script src="/library/loading-bar.js"></script>
 </head>
 <body>
   <div id="container">
@@ -12,6 +14,10 @@
   </div>
   <button id="slideLeft" type="button">Slide left</button>
   <button id="slideRight" type="button">Slide right</button>
+  <div class="ldBar" data-value="65"></div>
+  <div class="progress-container">
+    <div class="progress-bar" style="width: 70%;"></div>
+</div>
   <script>
         const buttonRight = document.getElementById('slideRight');
     const buttonLeft = document.getElementById('slideLeft');

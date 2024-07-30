@@ -75,7 +75,7 @@ body {
     font-weight: 800;
     /*color: #fff; */
     /*color: #F29494; */
-    color: red;
+    color: #fff;
     background: #373b40;
     word-break: break-word;
     border-radius: 264px;
@@ -397,6 +397,46 @@ img:hover {
 .img-container:hover:after {
   visibility: visible;
   opacity: 1;
+}
+
+.container-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.card-skills {
+    flex-direction: column;
+    width: calc(40%);
+    margin-bottom: 50px;
+}
+
+.progress-container {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+
+    height: 10px;
+}
+
+.progress-bar {
+    height: 10px;
+    width: 0;
+    background-color: #68e0cf;
+    border-radius: 25px 0 0 25px;
+    transition: width 0.4s ease;
+    
+
+}
+
+.progress-bar-percent {
+    
+    color:   #68e0cf;
+    margin-left: 0;
+    font-size: 20px;
+    margin-top: -35px;
+    
 }
 
 
