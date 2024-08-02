@@ -34,6 +34,52 @@
 }
 
 
-.test {
+/* Container styling */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
 
+/* Input field styling */
+.input-container input {
+  width: 100%;
+  background-color: #32363b;
+  border: 1px solid #444;
+  border-radius: 15px;
+  padding: 15px 15px 0 15px; /* Top padding for label space */
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: transparent; /* Hide placeholder text */
+}
+
+/* Label styling */
+.input-container label {
+  position: absolute;
+  top: 15px; /* Align with input padding */
+  left: 15px;
+  background-color: #32363b;
+  padding: 0 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  transition: 0.2s ease all; /* Smooth transition */
+  pointer-events: none; /* Disable interaction */
+}
+
+/* Label asterisk styling */
+.input-container label span {
+  color: #00d8b5;
+}
+
+/* Floating label */
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -10px; /* Move label above input */
+  left: 10px; /* Adjust as necessary */
+  font-size: 12px; /* Smaller font size */
+  color: #00d8b5; /* Optional: change color on focus */
 }
