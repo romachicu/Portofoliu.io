@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ticket.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon"><img src="img/marker.png"></div>
+            <div class="menu">
+                <ul class="ull">
+                    <li class="menu-icon lii"></li>    
+                    <li class="lii"><a href="#about">About Rembrant</a></li>
+                    <li class="lii"><a href="#work">Featured Works</a></li>
+                    <li class="lii"><a href="#visitor">Visitor Information</a></li>
+                    <li class="lii"><a href="#ticket">Tickets</a></li>
+                  
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class="start-page">
+            <div class="front-title">
+            <h3>March 01 - March 20</h3>
+            
+            <h1>Rembrandt:</h1> <span> Master of Light and Shadow</span>
+                <button class="button-buy-ticket">Buy Ticket</button>
+            </div>
+        </div>
+    </div>
+    <section id="about">
+      
+        <div class="container">
+              <h2>About Rembrandt</h2>
+            <div class="card">
+                <p>Renowned for his unparalleled mastery of light, shadow, and emotion, Rembrandt van Rijn is one of the most revered painters in art history. Born in 1606 in Leiden, Netherlands, Rembrandt's artistic journey took him through triumph and tragedy, shaping his unique style and vision</p>
+                <img class="img-profile" src="img/rembrandt1.png">
+            </div>
+            <div class="card">
+                 <img class="img-profile" src="img/rembrandt2.png">
+                <p style="text-align: right;">Rembrandt's artistry is characterized by his ability to capture the human experience with unparalleled depth and sensitivity. From intimate portraits to grand historical scenes, each of his works tells a story, inviting viewers to immerse themselves in the narrative.</p>
+            </div>
+            <div class="card">
+                <p style="text-align: right;">Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
+                <img class="img-profile" src="img/rembrandt3.png">
+            </div>
+            <div class="card">
+                <img class="img-profile" src="img/rembrandt4.png">
+                <p style="text-align: right;">Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="work">
+
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="img/fw1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/fw2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/fw3.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        
+    </section>
+<script>
+ 
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+
+</script>
+    </body>
+    </html>

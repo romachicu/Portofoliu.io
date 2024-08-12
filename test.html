@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table Cell Click</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/library/loading-bar.css">
-  <script src="/library/loading-bar.js"></script>
-</head>
-<body>
-  <div id="container">
-    <div id="content">Click the buttons to slide horizontally!</div>
-  </div>
-  <button id="slideLeft" type="button">Slide left</button>
-  <button id="slideRight" type="button">Slide right</button>
-  <div class="ldBar" data-value="65"></div>
-  <div class="progress-container">
-    <div class="progress-bar" style="width: 70%;"></div>
-</div>
-<div class="input-container">
-  <input type="text" id="full-name" placeholder=" " required>
-  <label for="full-name">FULL NAME <span>*</span></label>
-</div>
+<html>
+    <head>
+        <title>OpenLayers Simplest Example</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+    </head>
+    <body>
+        <div id="Map" style="height: 250px"></div>
+        <span class="material-symbols-outlined" id="Markers">
+            location_on
+        </span>
+        <script src="OpenLayers.js"></script>
+        <script>
+            var lat = 47.0231597;
+            var lon = 28.8352401;
+            var zoom = 17;
 
+            var fromProjection = new OpenLayers.Projection("EPSG:4326"); // Transform from WGS 1984
+            var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+            var position = new OpenLayers.LonLat(lon, lat).transform(
+                fromProjection,
+                toProjection,
+            );
 
-  <script>
-        const buttonRight = document.getElementById('slideRight');
-    const buttonLeft = document.getElementById('slideLeft');
+            map = new OpenLayers.Map("Map");
+            var mapnik = new OpenLayers.Layer.OSM();
+            map.addLayer(mapnik);
 
-    buttonRight.onclick = function () {
-      document.getElementById('container').scrollLeft += 20;
-    };
-    buttonLeft.onclick = function () {
-      document.getElementById('container').scrollLeft -= 20;
-    };
-    </script>
-</body>
+            var markers = new OpenLayers.Layer.Markers("Markers");
+            map.addLayer(markers);
+            markers.addMarker(new OpenLayers.Marker(position));
+
+            map.setCenter(position, zoom);
+        </script>
+    </body>
 </html>
