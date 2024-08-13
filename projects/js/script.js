@@ -73,3 +73,256 @@ if (purchaseAmount >= 100) {
     `Pretule pentru factura este de  ${USDollar.format(purchaseAmount * VAT)}\n VAT 5%: ${USDollar.format(purchaseAmount * (1 - VAT))}`,
   );
 }
+
+
+
+//ex. 5
+// testing: [romnR5Fd - parola medie [OK] ] / [sefasdgrFFFFGggg266ngbdvn - parola puternica[OK] ] / [ sfcerd - parola slaba [OK] / [ddd  - parola nesigura [OK]] 
+let password = 'romnFFFFhgcvdcjv8888cwec8JJj'
+let len =password.length
+const containsNumber = /\d/.test(password);
+
+if (len>=12 &&  password.toUpperCase() && password.toLowerCase() && containsNumber==true)
+{
+  console.log('parola e puternica')
+}
+
+else if (len>=8  && password.toUpperCase() && password.toLowerCase()  && containsNumber==true)
+{
+  console.log('parola e medie')
+}
+else if (len>=6  && password.toLowerCase())
+{
+  console.log('parola e salaba')
+}
+else {console.log('parola nesigura')}
+
+
+//ex. 6
+//testing: codul functioneaza dar asta nu-i abordare trebuie for
+/*range testat: 
+ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,
+ 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211,
+223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 
+347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 
+463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 
+607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 
+743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 
+883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997.
+
+*/
+let numberInput = 541;
+let len1 =numberInput.length
+
+if (numberInput%2==0 ) {
+
+  if (numberInput%3==0){
+  console.log('no')
+}
+else if (numberInput%4==0){
+  console.log('no')
+}
+else if (numberInput%5==0){
+  console.log('no')
+}
+else if (numberInput%6==0){
+  console.log('no')
+}
+else if (numberInput%7==0){
+  console.log('no')
+}
+else if (numberInput%8==0){
+  console.log('no')
+}
+else if (numberInput%9==0){
+  console.log('no')
+} else {console.log('no')}}
+
+else if (numberInput%3==0) {
+  if(numberInput%2==0) {
+    console.log('no')
+  }
+  else if (numberInput%3==0 && len1==1){
+    console.log('da')
+  }
+  else if (numberInput%4==0){
+    console.log('no')
+  }
+  else if (numberInput%5==0){
+    console.log('no')
+  }
+  else if (numberInput%6==0){
+    console.log('no')
+  }
+  else if (numberInput%7==0){
+    console.log('no')
+  }
+  else if (numberInput%8==0){
+    console.log('no')
+  }
+  else if (numberInput%9==0){
+    console.log('no')
+  } else {console.log('no')}
+}
+
+else if (numberInput%4==0) {
+  if(numberInput%2==0) {
+    console.log('no')
+  }
+  else if (numberInput%3==0){
+    console.log('no')
+  }
+  else if (numberInput%4==0 && len1==1){
+    console.log('da')
+  }
+  else if (numberInput%5==0){
+    console.log('no')
+  }
+  else if (numberInput%6==0){
+    console.log('no')
+  }
+  else if (numberInput%7==0){
+    console.log('no')
+  }
+  else if (numberInput%8==0){
+    console.log('no')
+  }
+  else if (numberInput%9==0){
+    console.log('no')
+  } else {console.log('no')}
+}
+
+else if (numberInput%5==0) {
+  if(numberInput%2==0) {
+    console.log('no')
+  }
+  else if (numberInput%3==0){
+    console.log('no')
+  }
+  else if (numberInput%4==0){
+    console.log('no')
+  }
+  else if (numberInput%5==0 && len1==1){
+    console.log('da')
+  }
+  else if (numberInput%6==0){
+    console.log('no')
+  }
+  else if (numberInput%7==0){
+    console.log('no')
+  }
+  else if (numberInput%8==0){
+    console.log('no')
+  }
+  else if (numberInput%9==0){
+    console.log('no')
+  } else {console.log('no')}
+
+  
+}
+else if (numberInput%6==0) {
+  if(numberInput%2==0) {
+    console.log('no')
+  }
+  else if (numberInput%3==0){
+    console.log('no')
+  }
+  else if (numberInput%4==0){
+    console.log('no')
+  }
+  else if (numberInput%5==0){
+    console.log('da')
+  }
+  else if (numberInput%6==0 && len1==1){
+    console.log('da')
+  }
+  else if (numberInput%7==0){
+    console.log('no')
+  }
+  else if (numberInput%8==0){
+    console.log('no')
+  }
+  else if (numberInput%9==0){
+    console.log('no')
+  } else {console.log('no')}}
+
+  else if (numberInput%7==0) {
+    if(numberInput%2==0) {
+      console.log('no')
+    }
+    else if (numberInput%3==0){
+      console.log('no')
+    }
+    else if (numberInput%4==0){
+      console.log('no')
+    }
+    else if (numberInput%5==0){
+      console.log('da')
+    }
+    else if (numberInput%6==0){
+      console.log('da')
+    }
+    else if (numberInput%7==0 && len1==1){
+      console.log('da')
+    }
+    else if (numberInput%8==0){
+      console.log('no')
+    }
+    else if (numberInput%9==0){
+      console.log('no')
+    } else {console.log('no')}}
+  
+    else if (numberInput%8==0) {
+      if(numberInput%2==0) {
+        console.log('no')
+      }
+      else if (numberInput%3==0){
+        console.log('no')
+      }
+      else if (numberInput%4==0){
+        console.log('no')
+      }
+      else if (numberInput%5==0){
+        console.log('da')
+      }
+      else if (numberInput%6==0){
+        console.log('da')
+      }
+      else if (numberInput%7==0){
+        console.log('no')
+      }
+      else if (numberInput%8==0 && len1==1){
+        console.log('da')
+      }
+      else if (numberInput%9==0){
+        console.log('no')
+      } else {console.log('no')}}
+    
+      
+      else if (numberInput%9==0) {
+        if(numberInput%2==0) {
+          console.log('no')
+        }
+        else if (numberInput%3==0){
+          console.log('no')
+        }
+        else if (numberInput%4==0){
+          console.log('no')
+        }
+        else if (numberInput%5==0){
+          console.log('da')
+        }
+        else if (numberInput%6==0){
+          console.log('da')
+        }
+        else if (numberInput%7==0){
+          console.log('no')
+        }
+        else if (numberInput%8==0){
+          console.log('no')
+        }
+        else if (numberInput%9==0 && len1==1){
+          console.log('da')
+        } else {console.log('no')}}
+      
+        else {console.log("da")}
