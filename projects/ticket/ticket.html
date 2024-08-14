@@ -13,8 +13,7 @@
         <nav>
             <div class="menu-icon"><img src="img/marker.png"></div>
             <div class="menu">
-                <ul class="ull">
-                    <li class="menu-icon lii"></li>    
+                <ul class="ull">    
                     <li class="lii"><a href="#about">About Rembrant</a></li>
                     <li class="lii"><a href="#work">Featured Works</a></li>
                     <li class="lii"><a href="#visitor">Visitor Information</a></li>
@@ -60,65 +59,51 @@
     </section>
 
     <section id="work">
-
-        <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <img src="img/fw1.png" style="width:100%">
+      <h2 class="featured-works">Featured Works</h2>
+      <div class="work-scroll">
+        <div class="work-container">
+          <div class="work-card" onclick="scrollToCard(0)">
+            <div class="work-card-desc"><h3>The Night Watch</h3><p>Explore Rembrandt's most famous masterpiece, a monumental painting that captures a dramatic moment in Dutch history. Step into the world of 17th-century Amsterdam as you witness the vibrant characters and intricate details that make this painting a true masterpiece. </p></div>
+            <div><img src="img/fw1.png" alt=""></div>
+          </div>
+          <div class="work-card" onclick="scrollToCard(1)">
+            <div class="work-card-desc"><h3>The Anatomy Lesson of Dr. Nicolaes Tulp</h3><p>Experience the intersection of medicine and artistry as Rembrandt masterfully captures the moment of discovery and learning. This painting is based on an actual event where Dr. Tulp, a Amsterdam physician, conducted a public dissection. </p></div>
+            <div><img src="img/fw2.png" alt=""></div>
+          </div>
+          <div class="work-card" onclick="scrollToCard(2)">
+            <div class="work-card-desc"><h3>The Jewish Bride</h3><p>Immerse yourself in the tender embrace of love and devotion depicted in this intimate painting. Experience the emotional depth of the couple as Rembrandt captures the essence of human connection, emotional sensitivity and affection </p></div>
+            <div><img src="img/fw3.png" alt=""></div>
+          </div>
         </div>
-
-        <div class="mySlides fade">
-          <img src="img/fw2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="img/fw3.png" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-
-        
+      </div>
     </section>
-<script>
+    
+    <script>
+      function scrollToCard(index) {
+        var workScroll = document.querySelector('.work-scroll');
+        var cards = document.querySelectorAll('.work-card');
+        var containerWidth = workScroll.offsetWidth; 
+        var cardWidth = cards[0].offsetWidth; 
+        var gap = parseInt(window.getComputedStyle(cards[0]).marginRight); 
+    
+
+        var scrollPosition = (cardWidth + gap) * index - (containerWidth / 2) + (cardWidth / 2);
+        
  
-    let slideIndex = 1;
-    showSlides(slideIndex);
+        scrollPosition = Math.max(0, Math.min(scrollPosition, workScroll.scrollWidth - containerWidth));
+    
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        workScroll.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth'
+        });
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-
-
-</script>
+    
+     
+      document.addEventListener("DOMContentLoaded", function() {
+        scrollToCard(1);
+      });
+    </script>
+    
     </body>
     </html>

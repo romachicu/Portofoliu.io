@@ -111,7 +111,7 @@ else {console.log('parola nesigura')}
 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997.
 
 */
-let numberInput = 541;
+let numberInput = 1541;
 let len1 =numberInput.length
 
 if (numberInput%2==0 ) {
@@ -231,7 +231,7 @@ else if (numberInput%6==0) {
     console.log('no')
   }
   else if (numberInput%5==0){
-    console.log('da')
+    console.log('no')
   }
   else if (numberInput%6==0 && len1==1){
     console.log('da')
@@ -257,10 +257,10 @@ else if (numberInput%6==0) {
       console.log('no')
     }
     else if (numberInput%5==0){
-      console.log('da')
+      console.log('no')
     }
     else if (numberInput%6==0){
-      console.log('da')
+      console.log('no')
     }
     else if (numberInput%7==0 && len1==1){
       console.log('da')
@@ -283,10 +283,10 @@ else if (numberInput%6==0) {
         console.log('no')
       }
       else if (numberInput%5==0){
-        console.log('da')
+        console.log('no')
       }
       else if (numberInput%6==0){
-        console.log('da')
+        console.log('no')
       }
       else if (numberInput%7==0){
         console.log('no')
@@ -310,10 +310,10 @@ else if (numberInput%6==0) {
           console.log('no')
         }
         else if (numberInput%5==0){
-          console.log('da')
+          console.log('no')
         }
         else if (numberInput%6==0){
-          console.log('da')
+          console.log('no')
         }
         else if (numberInput%7==0){
           console.log('no')
@@ -339,3 +339,101 @@ if (a+b>c && a+c>b && b+c>a) {
   console.log('aceste 3 laturi poate fi un triunghi')
 }
 else {console.log('aceste 3 laturi nu poate fi un triunghi')}
+
+
+///
+///
+///
+
+let delfini
+let koalas
+
+ 
+
+delfini = (5+6+10)/3
+koalas = (7+4+6)/3
+
+if( delfini>koalas) {
+  clonsole.log("delfni au cistigat")
+} else if(koalas>deffini) {
+  console.log('koalasa au cistigat')
+} else {
+  console.log("Remiza")
+}
+
+
+
+
+let day=3;
+
+switch(day) {
+  case 1: 
+    console.log("Luni");
+    break;  
+  case 2: 
+    console.log('marti');
+    break;  
+  case 3:
+    console.log('miercuri');
+    break;  
+  case 4:
+    console.log('joi');
+    break;  
+  case 5:
+    console.log('bineri');
+    break;  
+  case 6:
+    console.log('sambata');
+    break;  
+  case 7:
+    console.log('duminica');  
+    break;  
+
+    default:
+      console.log('zi ne existenta')
+
+}
+
+
+
+
+
+let grade = 10;
+
+
+switch(grade) {
+  case (grade===10):
+    console.log('excelent')
+    break;
+  case (grade>=8 && grade<9):
+    console.log("foarte bine");
+    break;
+  case (grade>=6 && grade<=7):
+    console.log('bine');
+    break;
+  case (grade===5):
+    console.log('satisficator');
+    break;
+    case (grade===4):
+      console.log('nesatisfacator');
+      break;
+
+    default:
+      console.log('nu se afla in range');  
+      
+}
+
+
+let color="red";
+
+switch(color) {
+  case "red":
+    console.log('Stop');
+  case "yellow":
+    console.log('Asteptare');
+ case "green":
+    console.log('Mergi');
+default:
+    console.log('semafor stricat');
+
+}
