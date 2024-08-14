@@ -326,3 +326,16 @@ else if (numberInput%6==0) {
         } else {console.log('no')}}
       
         else {console.log("da")}
+
+
+//ex. 7
+//
+
+let a=2;
+let b=1;
+let c=4;
+
+if (a+b>c && a+c>b && b+c>a) {
+  console.log('aceste 3 laturi poate fi un triunghi')
+}
+else {console.log('aceste 3 laturi nu poate fi un triunghi')}
