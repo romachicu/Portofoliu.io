@@ -54,7 +54,6 @@ header {
 }
 
 body {
-  font-family: Arial, sans-serif;
   background: #130D0A;
 }
 
@@ -232,4 +231,164 @@ h2 {
   justify-content: space-between;
   height: 256px;
 
+}
+
+.work-scroll.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.container-count {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 200px 100px;
+}
+
+.card-count {
+  display: flex;
+  width: 186.11px;
+  justify-content: center;
+  flex-direction: column;
+  gap:8px;
+}
+
+hr  {
+  width: 186.11px ;
+  border: 0.87px solid #493F39;
+}
+
+#visitor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-count p { 
+  font-size: 26px;
+}
+
+.card-count h2 {
+ font-size:  90px;
+}
+
+.container-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  color: #DED5BF;
+  
+}
+.card-location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:  1020px;
+    margin-top: 50px;
+  }
+
+.card-location h3 {
+  font-size: 36px;
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  height: 316px;
+  opacity: 0.6;
+  margin-top: 50px;
+}
+.container-location h4{
+  font-size: 20px;
+  margin-top: 50px;
+}
+.location-desc h3{
+  font-family: "Open Sans", sans-serif;
+}
+
+#ticket {
+  background-color: #DED5BF;
+  height: 784px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  
+}
+.ticket-choose-title {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  font-family: "Cormorant",sans-serif;
+}
+
+.ticket-container {
+  color: #DED5BF;
+  height: 784px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  justify-content: center;
+
+}
+
+.card-ticket-one{
+  display: flex;
+  border: 1px solid #000;
+  width: 420px;
+  height: 488px;
+  border-radius: 16px;
+  flex-direction: column;
+
+  
+}
+
+.card-ticket-two{
+  display: flex;
+  background-color:  #000;
+  border-radius: 16px;
+  width: 420px;
+  height: 488px;
+  flex-direction: column;
+}
+.ticket-type {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  align-content: center;
+}
+
+.ticket-type h3 {
+  display: flex;
+  justify-content: start;
+} 
+
+.card-ticket-one h2 {
+  color:   #000;
+  margin: auto;
+}
+.card-ticket-one h3 {
+  color:   #000;
+   margin: auto;
+}
+
+.card-ticket-one h4 {
+  font-size: 20px;
+  color: #130D0A;
+  margin: 25px;
+}
+
+.card-ticket-one ul{
+  color: #130D0A;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.card-ticket-one button {
+  width: 181px;
+  height: 60px;
+  margin: 0 auto;
 }

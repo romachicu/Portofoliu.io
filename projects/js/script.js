@@ -417,6 +417,9 @@ switch(grade) {
     case (grade===4):
       console.log('nesatisfacator');
       break;
+    case (grade>=1 && grade<=3):
+    console.log('nesatisfacator');
+    break;
 
     default:
       console.log('nu se afla in range');  
