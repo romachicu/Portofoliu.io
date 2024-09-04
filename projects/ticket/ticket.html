@@ -11,8 +11,12 @@
 <body>
     <header>
         <nav>
+            
             <div class="menu-icon"><img src="img/marker.png"></div>
             <div class="menu">
+            
+                    <img src="icon/menu.svg" alt="Menu Icon">
+             
                 <ul class="ull">    
                     <li class="lii"><a href="#about">About Rembrant</a></li>
                     <li class="lii"><a href="#work">Featured Works</a></li>
@@ -37,21 +41,21 @@
       
         <div class="container">
               <h2>About Rembrandt</h2>
-            <div class="card">
+            <div class="card card-revert">
                 <p>Renowned for his unparalleled mastery of light, shadow, and emotion, Rembrandt van Rijn is one of the most revered painters in art history. Born in 1606 in Leiden, Netherlands, Rembrandt's artistic journey took him through triumph and tragedy, shaping his unique style and vision</p>
                 <img class="img-profile" src="img/rembrandt1.png">
             </div>
             <div class="card">
                  <img class="img-profile" src="img/rembrandt2.png">
-                <p style="text-align: right;">Rembrandt's artistry is characterized by his ability to capture the human experience with unparalleled depth and sensitivity. From intimate portraits to grand historical scenes, each of his works tells a story, inviting viewers to immerse themselves in the narrative.</p>
+                <p >Rembrandt's artistry is characterized by his ability to capture the human experience with unparalleled depth and sensitivity. From intimate portraits to grand historical scenes, each of his works tells a story, inviting viewers to immerse themselves in the narrative.</p>
             </div>
-            <div class="card">
-                <p style="text-align: right;">Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
+            <div class="card card-revert">
+                <p>Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
                 <img class="img-profile" src="img/rembrandt3.png">
             </div>
             <div class="card">
                 <img class="img-profile" src="img/rembrandt4.png">
-                <p style="text-align: right;">Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
+                <p>Despite facing personal hardships and financial struggles, Rembrandt's artistic legacy endures, inspiring generations of artists and art enthusiasts. His innovative use of light and shadow, known as chiaroscuro, revolutionized the art world and continues to captivate audiences today.</p>
                 
             </div>
             
@@ -74,8 +78,15 @@
             <div class="work-card-desc"><h3>The Jewish Bride</h3><p>Immerse yourself in the tender embrace of love and devotion depicted in this intimate painting. Experience the emotional depth of the couple as Rembrandt captures the essence of human connection, emotional sensitivity and affection </p></div>
             <div><img src="img/fw3.png" alt=""></div>
           </div>
+           
         </div>
+         
       </div>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
     </section>
 
     <section id="visitor">
@@ -112,42 +123,96 @@
         <div class="ticket-container">
             <div class="card-ticket-one">
                 <div class="ticket-type"><h2>Regular</h2><h3>€5</h3></div>
-                <h4>For those who want to immerse themselves in the world of paintings on their own</h4>
+                <h4>For those who want to immerse themselves in the world of paintings on their own.</h4>
                 <ul>
                     <li>one day visit</li>
                     <li>audioguide</li>
                 </ul>
                 <button>Buy Tickets</button>
             </div>
-            <div class="card-ticket-two"></div>
+            <div class="card-ticket-two">
+                <div class="ticket-type"><h2>Guided</h2><h3>€10</h3></div>
+                <h4>For those who want to delve deeper into Rembrandt’s art.</h4>
+                <ul>
+                    <li>one day visit</li>
+                    <li>1.5 guided tou</li>
+                    <li>lecture on the artist’s life</li>
+                </ul>
+                <button>Buy Tickets</button>
+            </div>
+            
         </div>
     </section>
+    <footer calss="footer-desc">
+      
+        <div class="footer-desc-left">
+            <div calss="footer-info">
+                <h3>Information:</h3>
+                <p>About Rembrandt</p>
+                <p>Featured Works</p>
+                <p>Visitor Information</p>
+                <p>Tickets</p>
+            </div>
+            <div class="footer-contact">
+                <div class="footer-contact-phone">
+                    <h3>Contacts:</h3>
+                    <p>+373 69 12 23 34</p>
+                </div>
+                <div class="footer-contact-follow">
+                    <h3>Follow us:</h3>
+                    <div class="footer-contact-follow-img">
+                    <img src="icon/insta.png">
+                    <img src="icon/fb.png">
+                    <div calss="footer-contact-follow-icons">                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div calss="footer-desc-right">
+            <div class="footer-desc-right-center">
+            <p>All other collections and exhibitions at the museum are open from Monday to Sunday between 09:00 and 18:00</p>
+                </div>
+        </div>
+        
+    </footer>
     
     <script>
-      function scrollToCard(index) {
-        var workScroll = document.querySelector('.work-scroll');
-        var cards = document.querySelectorAll('.work-card');
-        var containerWidth = workScroll.offsetWidth; 
-        var cardWidth = cards[0].offsetWidth; 
-        var gap = parseInt(window.getComputedStyle(cards[0]).marginRight); 
-    
+        function scrollToCard(index) {
+            var workScroll = document.querySelector('.work-scroll');
+            var cards = document.querySelectorAll('.work-card');
+            var dots = document.querySelectorAll('.dot');
+            var containerWidth = workScroll.offsetWidth; 
+            var cardWidth = cards[0].offsetWidth; 
+            var gap = parseInt(window.getComputedStyle(cards[0]).marginRight); 
 
-        var scrollPosition = (cardWidth + gap) * index - (containerWidth / 2) + (cardWidth / 2);
-        
- 
-        scrollPosition = Math.max(0, Math.min(scrollPosition, workScroll.scrollWidth - containerWidth));
-    
+            var scrollPosition = (cardWidth + gap) * index - (containerWidth / 2) + (cardWidth / 2);
+            scrollPosition = Math.max(0, Math.min(scrollPosition, workScroll.scrollWidth - containerWidth));
 
-        workScroll.scrollTo({
-          left: scrollPosition,
-          behavior: 'smooth'
+            workScroll.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+
+            // Actualizează indicatorii
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+        }
+
+        function autoScrollCards() {
+            var currentIndex = 0;
+            var cards = document.querySelectorAll('.work-card');
+
+            setInterval(function() {
+                scrollToCard(currentIndex);
+                currentIndex = (currentIndex + 1) % cards.length;
+            }, 3000); // Interval de 3 secunde pentru fiecare derulare
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            autoScrollCards();
         });
-      }
-    
-     
-      document.addEventListener("DOMContentLoaded", function() {
-        scrollToCard(1);
-      });
     </script>
     
     </body>

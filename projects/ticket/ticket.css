@@ -253,6 +253,25 @@ h2 {
   gap:8px;
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #262220;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
 hr  {
   width: 186.11px ;
   border: 0.87px solid #493F39;
@@ -312,9 +331,10 @@ hr  {
 
 #ticket {
   background-color: #DED5BF;
-  height: 784px;
+height: 784px; 
   margin-top: 80px;
   margin-bottom: 80px;
+
   
 }
 .ticket-choose-title {
@@ -327,12 +347,12 @@ hr  {
 
 .ticket-container {
   color: #DED5BF;
-  height: 784px;
+ /* height: 784px; */
   display: flex;
   flex-wrap: wrap;
   gap: 56px;
   justify-content: center;
-
+  margin-bottom: 50px;
 }
 
 .card-ticket-one{
@@ -366,29 +386,329 @@ hr  {
   justify-content: start;
 } 
 
+
 .card-ticket-one h2 {
   color:   #000;
+  font-family: Cormorant;
   margin: auto;
 }
 .card-ticket-one h3 {
-  color:   #000;
+   color:   #000;
+  font-family: Montserrat;
    margin: auto;
 }
 
 .card-ticket-one h4 {
   font-size: 20px;
   color: #130D0A;
-  margin: 25px;
+  font-family: Montserrat;
+  margin: 40px;
+  line-height: 28px;
 }
 
 .card-ticket-one ul{
   color: #130D0A;
-  margin-left: 50px;
+  margin-left: 60px;
+  font-family: Montserrat;
   font-size: 20px;
+  margin-top: 20px;
 }
 
 .card-ticket-one button {
   width: 181px;
   height: 60px;
   margin: 0 auto;
+  margin-top: 50px;
+  border: 2px solid #130D0A;
+  border-radius: 8px;
+ /* padding: 16px 32px 16px 32px;*/
+  font-size: 20px;
+  font-family: Montserrat;
+  background-color: #DED5BF;
+}
+
+.card-ticket-two h2 {
+  color:   #DED5BF;
+  font-family: Cormorant;
+  margin: auto;
+}
+.card-ticket-two h3 {
+   color:   #DED5BF;
+   margin: auto;
+  font-family: Montserrat;
+}
+
+.card-ticket-two h4 {
+  font-size: 20px;
+  color: #DED5BF;
+  font-family: Montserrat;
+  margin: 40px;
+  line-height: 28px;
+}
+
+.card-ticket-two ul{
+  color: #DED5BF;
+  margin-left: 60px;
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.card-ticket-two button {
+  width: 181px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 2px solid #DED5BF;
+  border-radius: 8px;
+ /* padding: 16px 32px 16px 32px;*/
+  font-size: 20px;
+  font-family: Montserrat;
+  background-color: #130D0A;
+  color: #DED5BF;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 88px 128px 88px 128px;
+}
+
+
+.footer-desc {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+  height: 382px;
+  background-color: #000;
+  color: #DED5BF;
+ 
+}
+.footer-desc-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(40% - 20px);
+  font-size: 20px;
+  
+}
+.footer-desc-left h3{
+  font-size: 20px;
+  font-family: Montserrat;
+}
+
+.footer-desc-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;            
+  text-align: center; 
+ 
+}
+.footer-desc-right-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  font-family: Montserrat;
+  height: 100%;          
+  width: 451px;
+}
+/*
+.footer-desc-right p {
+  margin: 0 auto;
+}
+*/
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  margin: 18px;
+}
+.footer-info p {
+  margin: 18px;
+}
+.footer-contact-follow {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-follow-img {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+/* ADAPTARE PENTRU PAD */
+@media (min-width: 100px) and (max-width: 1000px) {
+
+
+
+  .container {
+    display: felx;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+    gap: 8px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 10px;
+  }
+.card p {
+  display: flex;
+  justify-content: start;
+   text-align: initial;
+  
+}
+  .card-revert {
+     display: flex;
+      flex-direction: column-reverse;
+    justify-content: flex-start;
+      margin: 10px;
+      padding: 10px;
+  }
+
+  .card img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .container-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    color: #DED5BF;
+
+  }
+  .card-location {
+      display: flex;
+     flex-direction: column;
+      justify-content: space-between;
+      width:  100%;
+      margin-top: 50px;
+    }
+
+  .card-location h3 {
+    font-size: 36px;
+  }
+
+  #location {
+    display: flex;
+    justify-content: center;
+  }
+
+  .map {
+    height: 316px;
+    opacity: 0.6;
+    margin-top: 50px;
+  }
+  .container-location h4{
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .location-desc h3{
+    font-family: "Open Sans", sans-serif;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+    margin:20px;
+    padding:0;
+   }
+  .footer-desc-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 80px;
+    width:300px;
+    font-size: 20px;
+
+  }
+
+  .footer-desc-right-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    font-family: Montserrat;
+    height: 100%;          
+    width: 80%;
+  
+  }
+
+  .footer-contact-follow-img {
+    display: flex;
+    justify-content: flex-start;
+    gap:38px;
+  }
+
+  .work-card {
+    width: 240px;
+    height: 552px;
+    gap:8px;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .work-card img{
+    width: 220px;
+    height: 145.15px;
+   
+  }
+
+  .ull {
+    display: none;
+  }
+
+  .menu img {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-self: center;
+    padding: 20px;
+  }
+
+
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+    color: #DED5BF;
+    margin: 0 auto;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  #ticket {
+    background-color: #DED5BF;
+    height: 1400px; 
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+
+  }
+}
+@media (min-width: 1000px)  and (max-width: 4000px){
+
+.menu img {
+  display: none;
+}
+
 }
