@@ -40,8 +40,7 @@ btn.addEventListener('click', () => {
     colorDiv.style.backgroundColor = rndH;
     const rgbColor = hexToRGB(rndH); 
     colorDesc.textContent = `${rndH} | ${rgbColor}`; 
+    console.log(colorDesc.textContent);
 });
 
-// Example usage:
-const exampleColor = getRandomHexCode();
-console.log(hexToRGB(exampleColor)); 
+
