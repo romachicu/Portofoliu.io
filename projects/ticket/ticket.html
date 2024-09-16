@@ -201,18 +201,20 @@
         }
 
         function autoScrollCards() {
-            var currentIndex = 0;
+            var currentIndex = 2; // Setează indexul inițial la 2 pentru a porni de la al doilea card
             var cards = document.querySelectorAll('.work-card');
 
             setInterval(function() {
                 scrollToCard(currentIndex);
                 currentIndex = (currentIndex + 1) % cards.length;
-            }, 3000); // Interval de 3 secunde pentru fiecare derulare
+            }, 5000); // Interval de 3 secunde pentru fiecare derulare
         }
 
         document.addEventListener("DOMContentLoaded", function() {
+            scrollToCard(1); // Pornire de la cardul al doilea
             autoScrollCards();
         });
+
     </script>
     
     </body>

@@ -205,6 +205,9 @@ h2 {
   display: flex;
   padding-left: 0; 
   gap: 80px;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+  scroll-behavior: smooth;
 }
 
 .work-card {
@@ -217,6 +220,7 @@ h2 {
   padding: 20px;
   cursor: pointer;
   border-radius: 20px;
+  scroll-snap-align: center;
 }
 
 .featured-works {
@@ -651,9 +655,19 @@ footer {
     justify-content: flex-start;
     gap:38px;
   }
-
+  .work-container {
+    width: 2800px;
+    margin: 0 auto; 
+    display: flex;
+    padding-left: 0; 
+    gap: 24px;
+    scroll-snap-type: x mandatory;
+    justify-content: center;
+    scroll-behavior: smooth;
+  }
+  
   .work-card {
-    width: 240px;
+    width: 80%;
     height: 552px;
     gap:8px;
     border: 2px solid #fff;
@@ -664,6 +678,8 @@ footer {
     padding: 20px;
     cursor: pointer;
     border-radius: 20px;
+    scroll-snap-align: center;
+     flex: 0 0 auto;
   }
 
   .work-card img{
