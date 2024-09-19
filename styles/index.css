@@ -43,7 +43,7 @@ body {
 }
 
 .image-profile {
-    background-image: url('/images/my_photo_back_and_white_avatar.jpg');
+    background-image: url('images/my_photo_back_and_white_avatar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
