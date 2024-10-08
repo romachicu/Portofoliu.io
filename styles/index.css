@@ -612,7 +612,9 @@ input[type=email]:focus {
 
 }
 
-
+.input-container > small {
+    color: red;
+}
 
 @font-face {
     font-family: 'Creattion Demo';
