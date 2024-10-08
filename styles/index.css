@@ -442,6 +442,7 @@ img:hover {
 .container-contact {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .container-contact-card {
@@ -643,7 +644,7 @@ img:hover {
         margin-top: 0;
         position: static;
     }
-    header {
+    /*header {
         width: 100px; 
         height: -50px;
         margin: 0;
@@ -658,12 +659,12 @@ img:hover {
         width: 50px; 
         overflow: hidden; 
     }
-    .menu-icon h4 {
+    /*.menu-icon h4 {
         display: none; 
     }
     nav {
         display: none; 
-    }
+    }*/
     .about-me {
         display: flex;
         justify-content: start;
@@ -687,4 +688,36 @@ img:hover {
         margin-top: 50px;
         margin-left:0;
     }
+    .container-contact  {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .container-contact-card  {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .container-contact-card input[type="submit"] {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .container-contact-card-desc {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid  #585d65;
+        width: 100%;
+        border-radius: 30px;
+      }
+      h3 ,h2{
+        margin: 10%;
+      }
 }
