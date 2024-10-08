@@ -39,11 +39,11 @@ body {
     width: 50%;
     z-index: 1;
     background-color: #f9f9f9;
-    
+
 }
 
 .image-profile {
-    background-image: url('/images/my_photo_back_and_white_avatar.jpg');
+    background-image: url('images/my_photo_back_and_white_avatar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -119,7 +119,7 @@ header {
     z-index: 999;
     border-radius: 50px;
     border: 2px solid #fff;
-    
+
 }
 
 
@@ -133,7 +133,7 @@ header {
 .about-me-desc {
     padding: 5px;
     margin: 5px;
-    
+
 }
 
 .about-me-desc-title {
@@ -251,18 +251,21 @@ hr {
     flex-direction: row;
     margin-top: 50px;
 }
+
 .experience-card {
     display: flex;
     justify-content: space-between;
     width: 400px;
 }
 
-.experience-card h4{
+.experience-card h4 {
     font-size: 20px;
 }
-.experience-card h6{
-    margin-top:5px;
+
+.experience-card h6 {
+    margin-top: 5px;
 }
+
 .rotation-title-experience {
     transform: rotate(90deg);
     color: #68e0cf;
@@ -270,33 +273,33 @@ hr {
     height: 100px;
     width: 100px;
     font-size: 14px;
-    top:0;
+    top: 0;
 }
 
-.experience-title  {
+.experience-title {
     padding-top: 20px;
-    
+
 }
 
 .scroll-container {
     width: 100%;
-  /*  overflow-x: auto; 
+    /*  overflow-x: auto; 
     
- /*   overflow: hidden; */ 
- overflow-x: scroll;
- overflow: hidden;
- white-space: nowrap; 
+ /*   overflow: hidden; */
+    overflow-x: scroll;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
 .scroll-container-edu {
     width: 100%;
-  /*  overflow-x: auto; 
+    /*  overflow-x: auto; 
     
- /*   overflow: hidden; */ 
- overflow-x: scroll;
- overflow: hidden;
- white-space: nowrap; 
+ /*   overflow: hidden; */
+    overflow-x: scroll;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .navs {
@@ -306,7 +309,8 @@ hr {
 }
 
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     padding: 20px;
     margin: 15px;
@@ -324,79 +328,79 @@ hr {
 
 .line-button {
     position: relative;
-    z-index: 9; 
-    width: 30%; 
+    z-index: 9;
+    width: 30%;
     margin-top: 0;
-    border-bottom: 2px solid #ccc; 
-    height: 2px; 
+    border-bottom: 2px solid #ccc;
+    height: 2px;
 }
 
 .container-project {
-      width: 80%;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 
 .column {
-  float: left;
-  width: 50%;
-  padding: 10px;
+    float: left;
+    width: 50%;
+    padding: 10px;
 }
 
 .column img {
-  margin-top: 12px;
-  display: block;
-  position: relative;
+    margin-top: 12px;
+    display: block;
+    position: relative;
 }
 
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
 
 
 img {
-  width: 100%;
-  transition: opacity 0.3s ease;
+    width: 100%;
+    transition: opacity 0.3s ease;
 }
 
 img:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .img-container {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .img-container:after {
-  content: attr(title);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #68e0cf;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s;
-  height: 100px;
-  font-size: 50px;
-  font-family: "Edu AU VIC WA NT Hand", cursive;
+    content: attr(title);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #68e0cf;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    height: 100px;
+    font-size: 50px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }
 
 .img-container:hover:after {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .container-skills {
@@ -426,17 +430,17 @@ img:hover {
     background-color: #68e0cf;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
-    
+
 
 }
 
 .progress-bar-percent {
-    
-    color:   #68e0cf;
+
+    color: #68e0cf;
     margin-left: 0;
     font-size: 20px;
     margin-top: -35px;
-    
+
 }
 
 .container-contact {
@@ -456,9 +460,9 @@ img:hover {
 .input-container {
     position: relative;
     margin-bottom: 30px;
-  }
+}
 
-  input[type=submit]  {
+input[type=submit] {
     background-color: #32363b;
     border: 1px solid #585d65;
     border-radius: 30px;
@@ -469,15 +473,16 @@ img:hover {
     height: 50px;
     font-weight: bold;
     width: 80%;
-  }
-  
-  input[type=text]:focus, input[type=email]:focus {
+}
+
+input[type=text]:focus,
+input[type=email]:focus {
     border: 1px solid #fff;
-  }
+}
 
-  
 
-  .input-container input{
+
+.input-container input {
     width: 100%;
     background-color: #32363b;
     border: 1px solid #585d65;
@@ -487,10 +492,10 @@ img:hover {
     font-size: 16px;
     outline: none;
     height: 50px;
-  }
-  
-  
-  .input-container textarea {
+}
+
+
+.input-container textarea {
     width: 100%;
     height: 150px;
     background-color: #32363b;
@@ -499,91 +504,92 @@ img:hover {
     font-size: 20px;
     color: #fff;
     padding: 20px 20px;
-  }
-  
-  .input-container input::placeholder {
-    color: transparent; 
-  }
+}
 
-  .input-container textarea::placeholder {
-    color: transparent; 
-  }
-  
+.input-container input::placeholder {
+    color: transparent;
+}
 
-  .input-container label {
+.input-container textarea::placeholder {
+    color: transparent;
+}
+
+
+.input-container label {
     position: absolute;
-    top: 15px; 
+    top: 15px;
     left: 15px;
     background-color: #32363b;
     padding: 0 5px;
     font-weight: bold;
     color: white;
     font-size: 16px;
-    transition: 0.2s ease all; 
-    pointer-events: none; 
-  }
-  
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
 
-  .input-container label span {
+
+.input-container label span {
     color: #00d8b5;
-  }
-  
+}
 
-  .input-container input:focus + label,
-  .input-container input:not(:placeholder-shown) + label {
-    top: -10px; 
-    left: 10px; 
-    font-size: 12px; 
-    color: #00d8b5; 
-  }
 
-  .input-container textarea:focus + label,
-  .input-container template:not(:placeholder-shown) + label {
-    top: -10px; 
-    left: 10px; 
-    font-size: 12px; 
-    color: #00d8b5; 
-  }
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #00d8b5;
+}
 
-  .container-contact-card-desc {
+.input-container textarea:focus+label,
+.input-container template:not(:placeholder-shown)+label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #00d8b5;
+}
+
+.container-contact-card-desc {
     display: flex;
     flex-direction: column;
-    border: 1px solid  #585d65;
+    border: 1px solid #585d65;
     width: 45%;
     border-radius: 30px;
-  }
+}
 
-  .desc-me-inline {
+.desc-me-inline {
     display: flex;
     flex-direction: row;
     margin: 50px 20px;
-  }
+}
 
- 
 
-  .desc-me {
+
+.desc-me {
     display: flex;
     flex-direction: column;
     margin: 50px 30px;
-  }
+}
 
-  .desc-me-name .name{
+.desc-me-name .name {
     font-size: 24px;
     color: #fff;
-    margin:10px 30px;
+    margin: 10px 30px;
     font-weight: bold;
     margin-bottom: 0;
-  }
-  .desc-me-name  h3{
+}
+
+.desc-me-name h3 {
     font-size: 14px;
-    margin:0px 30px;
-    font-weight:normal;
+    margin: 0px 30px;
+    font-weight: normal;
 
-  }
+}
 
 
 
-  @font-face {
+@font-face {
     font-family: 'Creattion Demo';
     src: url('/fonts/Creattion_Demo.otf') format('opentype');
 }
@@ -607,19 +613,22 @@ img:hover {
     height: 50px;
     margin: 10px;
 }
+
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
     }
-    *{
+
+    * {
         margin: 0;
         padding: 0;
     }
+
     .fixed-card {
         position: static;
         height: auto;
         width: 100%;
-        
+
     }
 
     .container .card:not(.fixed-card) {
@@ -649,19 +658,21 @@ img:hover {
         height: -50px;
         margin: 0;
         padding: 0;
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
+
     .menu-icon {
-        display: block; 
-        height: 50px; 
-        width: 50px; 
-        overflow: hidden; 
+        display: block;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
     }
     /*.menu-icon h4 {
         display: none; 
     }
+
     nav {
         display: none; 
     }*/
@@ -683,7 +694,8 @@ img:hover {
         display: flex;
         justify-content: start;
         flex-direction: column;
-         }
+    }
+
     .experience-card {
         margin-top: 50px;
         margin-left:0;
