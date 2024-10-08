@@ -446,6 +446,7 @@ img:hover {
 .container-contact {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .container-contact-card {
@@ -652,9 +653,8 @@ input[type=email]:focus {
         margin-top: 0;
         position: static;
     }
-
     header {
-        width: 100px;
+        width: 100px; 
         height: -50px;
         margin: 0;
         padding: 0;
@@ -669,15 +669,13 @@ input[type=email]:focus {
         width: 50px;
         overflow: hidden;
     }
-
     .menu-icon h4 {
-        display: none;
+        display: none; 
     }
 
     nav {
-        display: none;
+        display: none; 
     }
-
     .about-me {
         display: flex;
         justify-content: start;
@@ -700,6 +698,6 @@ input[type=email]:focus {
 
     .experience-card {
         margin-top: 50px;
-        margin-left: 0;
+        margin-left:0;
     }
 }
