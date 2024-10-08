@@ -1,462 +1,789 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script defer src="scroll.js"></script>
-    <script defer src="scroll_edu.js"></script>
-    <link rel="stylesheet" href="library/loading-bar.css">
-    <script src="library/loading-bar.js"></script>
-    <title>About</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="menu-icon"><h4>Chicu<br> Roman</h4></div>
-            <div class="menu">
-                <img src="icon/menu.svg" alt="Menu Icon">
-                <ul class="ull">
-                    <li class="menu-icon lii"></li>    
-                    <li class="lii"><a href="#about">About</a></li>
-                    <li class="lii"><a href="#experience">Experience</a></li>
-                    <li class="lii"><a href="#education">Education</a></li>
-                    <li class="dropdown lii">
-                        <a href="javascript:void(0)" class="dropbtn" href="#projects">Project</a>
-                        <div class="dropdown-content">
-                            <a href="/projects/country/index.html">Country</a>
-                            <a href="/projects/reteta/index.html">Reteta</a>
-                            <a href="/projects/grid/grid_v4.html">Travel</a>
-                             <a href="/projects/tea/tea.html">Tea</a>
-                             <a href="/projects/404/404.html">Page no found 404 </a>
-                             <a href="/projects/form/form.html">Form</a>
-                             <a href="/projects/tribute/tribute.html">Tribute page</a>
-                             <a href="/projects/store/store.html">E|Shop</a>
-                             <a href="/projects/sah/sah.html">Chess</a>
-                             <a href="/projects/cards/actress.html">Favorite actress</a>
-                             
-                        </div>
-                    </li>
-                    <li class="lii"><a href="#contact">Contact</a></li>
-                    <li class="lii"><a href="/cv/CV_Chicu_Roman_up.pdf">Download CV</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section id="home">
-        <div class="container">
-            <div class="card fixed-card">
-                <div class="image-profile img"></div>
-            </div>
-            <div class="card">
-                <h1 class="h-title">CHICU <br>ROMAN</h1>
-                <div class="start-description">
-                    <p>
-                        Sunt un Web Developer pasionat și dedicat, cu o experiență solidă în
-                        dezvoltarea și întreținerea aplicațiilor web moderne. Am abilități
-                        în HTML, CSS, JavaScript și diverse framework-uri front-end
-                        și back-end, precum React și Django. Experiența mea
-                        include lucrul cu baze de date SQL și NoSQL, precum și integrarea
-                        API-urilor RESTful.
-                    </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <script defer src="scroll.js"></script>
+        <script defer src="scroll_edu.js"></script>
+        <title>About</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="menu-icon">
+                    <h4>
+                        Chicu<br />
+                        Roman
+                    </h4>
                 </div>
-                <section class="start-description">
-                    <a href="#contact"><input class="button-home" type="button" value="CONTACT ME"></a>
-                    <a href="#about"><button class="button-home">&#9207;</button></a>
-                </section>
-                <section id="about" class="start-description about">
-                    <hr>
-                    <h2>About Me</h2>
-                    <h3>MY STORY</h3>
-                    <div class="container-skill">
+                <div class="menu">
+                    <!--  <img src="icon/menu.svg" alt="Menu Icon"> -->
+                    <ul class="ull">
+                        <li class="menu-icon lii"></li>
+                        <li class="lii"><a href="#about">About</a></li>
+                        <li class="lii">
+                            <a href="#experience">Experience</a>
+                        </li>
+                        <li class="lii"><a href="#education">Education</a></li>
+                        <li class="dropdown lii">
+                            <a
+                                href="javascript:void(0)"
+                                class="dropbtn"
+                                href="#projects"
+                                >Project</a
+                            >
+                            <div class="dropdown-content">
+                                <a href="/projects/country/index.html"
+                                    >Country</a
+                                >
+                                <a href="/projects/reteta/index.html">Reteta</a>
+                                <a href="/projects/grid/grid_v4.html">Travel</a>
+                                <a href="/projects/tea/tea.html">Tea</a>
+                                <a href="/projects/404/404.html"
+                                    >Page no found 404
+                                </a>
+                                <a href="/projects/form/form.html">Form</a>
+                                <a href="/projects/tribute/tribute.html"
+                                    >Tribute page</a
+                                >
+                                <a href="/projects/store/store.html">E|Shop</a>
+                                <a href="/projects/sah/sah.html">Chess</a>
+                                <a href="/projects/cards/actress.html"
+                                    >Favorite actress</a
+                                >
+                            </div>
+                        </li>
+                        <li class="lii"><a href="#contact">Contact</a></li>
+                        <li class="lii">
+                            <a href="/cv/CV_Chicu_Roman_up.pdf">Download CV</a>
+                        </li>
+                    </ul>
+                    <ul id="menu-open">
+                        <li class="dropdown lii" >
+                            <a href="javascript:void(0)" class="dropbtn" onclick="openMenu()">
+                                <img src="icon/menu.svg" alt="Menu Icon">
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="javascript:void(0)" onclick="toggleMenu('about')">About</a>
+                                <a href="javascript:void(0)" onclick="toggleMenu('experience')">Experience</a>
+                                <a href="javascript:void(0)" onclick="toggleMenu('education')">Education</a>
+                                <a href="javascript:void(0)" onclick="toggleMenu('projects')">Project</a>
+                                <a href="javascript:void(0)" onclick="toggleMenu('contact')">Contact</a>
+                                <a href="javascript:void(0)" onclick="toggleMenu()">Download CV</a>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </nav>
+        </header>
+        <section id="home">
+            <div class="container">
+                <div class="card fixed-card">
+                    <div class="image-profile img"></div>
+                </div>
+                <div class="card">
+                    <h1 class="h-title">CHICU <br />ROMAN</h1>
+                    <div class="start-description">
                         <p>
-                            Atent la detalii și standarte. De asemenea, am o înțelegere profundă a
-                            designului responsive și a accesibilității web, asigurându-mă că
-                            aplicațiile dezvoltate sunt accesibile pe toate dispozitivele și
-                            pentru toți utilizatorii. Sunt adeptul metodologiilor Agile și am
-                            experiență în lucrul în echipe de dezvoltare colaborative pentru a
-                            livra proiecte de succes la timp.
+                            Sunt un Web Developer pasionat și dedicat, cu o
+                            experiență solidă în dezvoltarea și întreținerea
+                            aplicațiilor web moderne. Am abilități în HTML, CSS,
+                            JavaScript și diverse framework-uri front-end și
+                            back-end, precum React și Django. Experiența mea
+                            include lucrul cu baze de date SQL și NoSQL, precum
+                            și integrarea API-urilor RESTful.
                         </p>
-                        <div class="about-me-description">
-                            <div class="about-me">
-                                <div class="about-me-desc"><h5>AGE:</h5> <h5>FREELANCE:</h5> <h5>PHONE:</h5></div>
-                                <div class="about-me-desc about-me-desc-title"><h5>29</h5><h5>Available</h5><h5>37368889505</h5></div>
-                            </div>
-                            <div class="about-me">
-                                <div class="about-me-desc"><h5>RESIDENCE:</h5> <h5>ADDRESS:</h5> <h5>E-MAIL:</h5></div>
-                                <div class="about-me-desc about-me-desc-title"><h5>MD</h5><h5>Chisinau</h5><h5>romachicu@gmail.com</h5></div>
-                            </div>
-                        </div>
                     </div>
-                </section>
-                <section id="experience" class="start-description about">
-                    <hr>
-                    <h2>Experience</h2>
-                    <h3>WORKING WITH</h3>
-
-                    <div class="navs">
-
-                        <span class="prev  material-symbols-outlined" id="slideLeft" > arrow_back_ios</span>
-                        <span class="next material-symbols-outlined" id="slideRight">arrow_forward_ios</span>
-
-                    </div>
-                    <div class="line">
-                    <div class="line-button"></div>
-                </div>
-                    <div class="scroll-container content" id="scroll-container">
+                    <section class="start-description">
+                        <a href="#contact"
+                            ><input
+                                class="button-home"
+                                type="button"
+                                value="CONTACT ME"
+                        /></a>
+                        <a href="#about"
+                            ><button class="button-home">&#9207;</button></a
+                        >
+                    </section>
+                    <section id="about" class="start-description about">
+                        <hr />
+                        <h2>About Me</h2>
+                        <h3>MY STORY</h3>
                         <div class="container-skill">
-                            <div class="experience-container">
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2018 - PRESENT</h5>
+                            <p>
+                                Atent la detalii și standarte. De asemenea, am o
+                                înțelegere profundă a designului responsive și a
+                                accesibilității web, asigurându-mă că
+                                aplicațiile dezvoltate sunt accesibile pe toate
+                                dispozitivele și pentru toți utilizatorii. Sunt
+                                adeptul metodologiilor Agile și am experiență în
+                                lucrul în echipe de dezvoltare colaborative
+                                pentru a livra proiecte de succes la timp.
+                            </p>
+                            <div class="about-me-description">
+                                <div class="about-me">
+                                    <div class="about-me-desc">
+                                        <h5>AGE:</h5>
+                                        <h5>FREELANCE:</h5>
+                                        <h5>PHONE:</h5>
                                     </div>
-                                    <div>
-                                        <h4>Metro Cash & Carry <br> Moldova</h4>
-                                        <div>
-                                            <h5 class="experience-title">
-                                                Customer data analysis & reporting Spec./<br> Data Engineer 
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>Teradata SQL Assistant</li>
-                                                    <li>Oracle PL Studio</li>
-                                                    <li>BigQuery</li>
-                                                    <li>Console Cloud Google (GCP)</li>
-                                                    <li>Looker Studio</li>
-                                                    <li>Jira</li>
-                                                </ul>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2018 MAR - MAY</h5>
-                                    </div>
-                                    <div>
-                                        <h4>Metro Cash & Carry <br> Moldova</h4>
-                                        <div>
-                                            <h5 class="experience-title">
-                                                Help Desk Support / Network Technician
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>CISCO, MIKROTIC equipment installations</li>
-                                                    <li>PA, Router, Switch installations</li>
-                                                    <li>M|POS equipments and systems</li>
-                                                    <li>Bizerba</li>
-                                                </ul>
-                                            </h6>
-                                        </div>
+                                    <div
+                                        class="about-me-desc about-me-desc-title"
+                                    >
+                                        <h5>29</h5>
+                                        <h5>Available</h5>
+                                        <h5>37368889505</h5>
                                     </div>
                                 </div>
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2017 August</h5>
+                                <div class="about-me">
+                                    <div class="about-me-desc">
+                                        <h5>RESIDENCE:</h5>
+                                        <h5>ADDRESS:</h5>
+                                        <h5>E-MAIL:</h5>
                                     </div>
-                                    <div>
-                                        <h4>B.C. Comertbank Moldova</h4>
-                                        <div>
-                                            <h5 class="experience-title">
-                                                System Administator
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>Internship networking and sys admin</li>
-                                                    <li>Windows Server 2012R2</li>
-                                                    <li>Activ Derectory</li>
-                                                    <li>WMWare</li>
-                                                </ul>
-                                            </h6>
+                                    <div
+                                        class="about-me-desc about-me-desc-title"
+                                    >
+                                        <h5>MD</h5>
+                                        <h5>Chisinau</h5>
+                                        <h5>romachicu@gmail.com</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="experience" class="start-description about">
+                        <hr />
+                        <h2>Experience</h2>
+                        <h3>WORKING WITH</h3>
+
+                        <div class="navs">
+                            <span
+                                class="prev material-symbols-outlined"
+                                id="slideLeft"
+                            >
+                                arrow_back_ios</span
+                            >
+                            <span
+                                class="next material-symbols-outlined"
+                                id="slideRight"
+                                >arrow_forward_ios</span
+                            >
+                        </div>
+                        <div class="line">
+                            <div class="line-button"></div>
+                        </div>
+                        <div
+                            class="scroll-container content"
+                            id="scroll-container"
+                        >
+                            <div class="container-skill">
+                                <div class="experience-container">
+                                    <div class="experience-card">
+                                        <div class="rotation-title-experience">
+                                            <h5>2018 - PRESENT</h5>
+                                        </div>
+                                        <div class="card-skills-desc">
+                                            <h4>
+                                                Metro Cash & Carry <br />
+                                                Moldova
+                                            </h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    Customer data analysis &
+                                                    reporting Spec./<br />
+                                                    Data Engineer
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>
+                                                            Teradata SQL
+                                                            Assistant
+                                                        </li>
+                                                        <li>
+                                                            Oracle PL Studio
+                                                        </li>
+                                                        <li>BigQuery</li>
+                                                        <li>
+                                                            Console Cloud Google
+                                                            (GCP)
+                                                        </li>
+                                                        <li>Looker Studio</li>
+                                                        <li>Jira</li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="experience-card">
+                                        <div class="rotation-title-experience">
+                                            <h5>2018 MAR - MAY</h5>
+                                        </div>
+                                        <div class="card-skills-desc">
+                                            <h4>
+                                                Metro Cash & Carry <br />
+                                                Moldova
+                                            </h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    Help Desk Support / Network
+                                                    Technician
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>
+                                                            CISCO, MIKROTIC
+                                                            equipment
+                                                            installations
+                                                        </li>
+                                                        <li>
+                                                            PA, Router, Switch
+                                                            installations
+                                                        </li>
+                                                        <li>
+                                                            M|POS equipments and
+                                                            systems
+                                                        </li>
+                                                        <li>Bizerba</li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="experience-card"
+                                        style="margin-left: 6px"
+                                    >
+                                        <div class="rotation-title-experience">
+                                            <h5>2017 AUG - SEP</h5>
+                                        </div>
+
+                                        <div class="card-skills-desc">
+                                            <div>
+                                                <h4>B.C. Comertbank Moldova</h4>
+
+                                                <h5 class="experience-title">
+                                                    System Administator
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>
+                                                            Internship
+                                                            networking and sys
+                                                            admin
+                                                        </li>
+                                                        <li>
+                                                            Windows Server
+                                                            2012R2
+                                                        </li>
+                                                        <li>Activ Derectory</li>
+                                                        <li>WMWare</li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section id="education" class="start-description about">
-                    <hr>
-                    <h2>Education</h2>
-                    <h3>STUDIED AT</h3>
-                    <div class="navs">
-
-                        <span class="prev  material-symbols-outlined" id="slideLeft_edu" > arrow_back_ios</span>
-                        <span class="next material-symbols-outlined" id="slideRight_edu">arrow_forward_ios</span>
-
-                    </div>
-                    <div class="line">
-                    <div class="line-button"></div>
-                </div>
-                    <div class="scroll-container-edu content" id="scroll-container-edu">
-                        <div class="container-skill">
-                            <div class="experience-container">
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2014 SEP - 2018 JUN</h5>
-                                    </div>
-                                    <div>
-                                        <h4>Technical University of<br> Moldova</h4>
+                    </section>
+                    <section id="education" class="start-description about">
+                        <hr />
+                        <h2>Education</h2>
+                        <h3>STUDIED AT</h3>
+                        <div class="navs">
+                            <span
+                                class="prev material-symbols-outlined"
+                                id="slideLeft_edu"
+                            >
+                                arrow_back_ios</span
+                            >
+                            <span
+                                class="next material-symbols-outlined"
+                                id="slideRight_edu"
+                                >arrow_forward_ios</span
+                            >
+                        </div>
+                        <div class="line">
+                            <div class="line-button"></div>
+                        </div>
+                        <div
+                            class="scroll-container-edu content"
+                            id="scroll-container-edu"
+                        >
+                            <div class="container-skill">
+                                <div class="experience-container">
+                                    <div class="experience-card">
+                                        <div class="rotation-title-experience">
+                                            <h5>2014 SEP - 2018 JUN</h5>
+                                        </div>
                                         <div>
-                                            <h5 class="experience-title">
-                                                Information Technology 
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>CISCO</li>
-                                                    <li>QA TESTING</li>
-                                                    <li>DATABASE</li>
-                                                    <li>C++/C#</li>
-                                                    <li>GRAPH TREE</li>
-                                                    <li>ML</li>
-                                                </ul>
-                                            </h6>
+                                            <h4>
+                                                Technical University of<br />
+                                                Moldova
+                                            </h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    Information Technology
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>CISCO</li>
+                                                        <li>QA TESTING</li>
+                                                        <li>DATABASE</li>
+                                                        <li>C++/C#</li>
+                                                        <li>GRAPH TREE</li>
+                                                        <li>ML</li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2024 JUN - 2024 OCT</h5>
-                                    </div>
-                                    <div>
-                                        <h4>Orange Digital Center</h4>
+                                    <div class="experience-card">
+                                        <div class="rotation-title-experience">
+                                            <h5>2024 JUN - 2024 OCT</h5>
+                                        </div>
                                         <div>
-                                            <h5 class="experience-title">
-                                                Front End Developer
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>HTML</li>
-                                                    <li>CSS</li>
-                                                    <li>Java Script</li>
-                                                    <li>Git</li>
-                                                </ul>
-                                            </h6>
+                                            <h4>Orange Digital Center</h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    Front End Developer
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>HTML</li>
+                                                        <li>CSS</li>
+                                                        <li>Java Script</li>
+                                                        <li>Git</li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2020 SEP - 2021 JAN</h5>
-                                    </div>
-                                    <div>
-                                        <h4>International Language <br>Training Center (ILTC) </h4>
+                                    <div class="experience-card">
+                                        <div class="rotation-title-experience">
+                                            <h5>2020 SEP - 2021 JAN</h5>
+                                        </div>
                                         <div>
-                                            <h5 class="experience-title">
-                                                English
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>English course for beginners</li>
-                                                    <li>Headway pre-intermediate book t</li>
-                                                </ul>
-                                            </h6>
+                                            <h4>
+                                                International Language
+                                                <br />Training Center (ILTC)
+                                            </h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    English
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>
+                                                            English course for
+                                                            beginners
+                                                        </li>
+                                                        <li>
+                                                            Headway
+                                                            pre-intermediate
+                                                            book
+                                                        </li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="experience-card">
-                                    <div class="rotation-title-experience">
-                                        <h5>2015 SEP - DEC</h5>
-                                    </div>
-                                    <div>
-                                        <h4>Pedagogical University of<br> Moldova </h4>
+                                    <div class="experience-card">
+                                        <div
+                                            class="rotation-title-experience"
+                                            style="margin-left: 8px"
+                                        >
+                                            <h5>2015 SEP - DEC</h5>
+                                        </div>
                                         <div>
-                                            <h5 class="experience-title">
-                                                English
-                                            </h5>
-                                            <h6 class="experience-title">
-                                                <ul>
-                                                    <li>English course for beginners</li>
-                                                    <li>Headway pre-intermediate book t</li>
-                                                </ul>
-                                            </h6>
+                                            <h4>
+                                                Pedagogical University <br />of
+                                                Moldova
+                                            </h4>
+                                            <div>
+                                                <h5 class="experience-title">
+                                                    English
+                                                </h5>
+                                                <h6 class="experience-title">
+                                                    <ul>
+                                                        <li>
+                                                            English course for
+                                                            beginners
+                                                        </li>
+                                                        <li>
+                                                            Headway
+                                                            pre-intermediate
+                                                            book t
+                                                        </li>
+                                                    </ul>
+                                                </h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section id="projects" class="start-description about">
-                    <hr>
-                    <h2>Projects</h2>
-                    <h3>LATEST WORKS</h3>
-                    <div class="container-project">
-                        <div class="row">
-                            <div class="column">
-                                 <a href="/projects/grid/grid_v4.html"><div title="Travel" class="img-container">
-                                   <img src="images/travel.jpg" />
-                                </div></a>
-                                <a href="/projects/tea/tea.html">
-                                <div title="Tea Shop" class="img-container">
-                                    <img src="images/tea.jpg" />
-                                </div></a>
-
-                            </div>
-                            <div class="column">
-                                <a href="/projects/404/404.html">
-                                <div title="404" class="img-container">
-                                    <img src="images/car_crash.jpg" />
-                                </div></a>
-                                <a href="/projects/reteta/index.html"><div title="Recipes" class="img-container">
-                                    <img src="images/recipes2.jpg" />
-                                </div></a>
-
-                            </div>
-                            <div class="column">
-                                <a href="/projects/form/form.html">
-                                <div title="Form" class="img-container">
-                                    <img src="images/form.jpg" />
-                                </div></a>
-                                <a href="/projects/tribute/tribute.html">
-                                <div title="Tribute" class="img-container">
-                                    <img src="images/tribute2.jpg" />
-                                </div></a>
-                                <a href="/projects/store/store.html">
-                                <div title="E|Shop" class="img-container">
-                                    <img src="images/eshop.jpg" />
-                                </div></a>
-                            </div>
-                            <div class="column">
-                                <a href="/projects/sah/sah.html">
-                                <div title="Chess" class="img-container">
-                                    <img src="images/Chess.jpg" />
-                                </div></a>
-                                <a href="/projects/cards/actress.html">
-                                <div title="Actress" class="img-container">
-                                    <img src="images/actress1.jpg" />
+                    </section>
+                    <section id="projects" class="start-description about">
+                        <hr />
+                        <h2>Projects</h2>
+                        <h3>LATEST WORKS</h3>
+                        <div class="container-project">
+                            <div class="row">
+                                <div class="column">
+                                    <a href="/projects/grid/grid_v4.html"
+                                        ><div
+                                            title="Travel"
+                                            class="img-container"
+                                        >
+                                            <img src="images/travel.jpg" /></div
+                                    ></a>
+                                    <a href="/projects/tea/tea.html">
+                                        <div
+                                            title="Tea Shop"
+                                            class="img-container"
+                                        >
+                                            <img src="images/tea.jpg" /></div
+                                    ></a>
                                 </div>
+                                <div class="column">
+                                    <a href="/projects/404/404.html">
+                                        <div title="404" class="img-container">
+                                            <img
+                                                src="images/car_crash.jpg"
+                                            /></div
+                                    ></a>
+                                    <a href="/projects/reteta/index.html"
+                                        ><div
+                                            title="Recipes"
+                                            class="img-container"
+                                        >
+                                            <img
+                                                src="images/recipes2.jpg"
+                                            /></div
+                                    ></a>
+                                </div>
+                                <div class="column">
+                                    <a href="/projects/form/form.html">
+                                        <div title="Form" class="img-container">
+                                            <img src="images/form.jpg" /></div
+                                    ></a>
+                                    <a href="/projects/tribute/tribute.html">
+                                        <div
+                                            title="Tribute"
+                                            class="img-container"
+                                        >
+                                            <img
+                                                src="images/tribute2.jpg"
+                                            /></div
+                                    ></a>
+                                    <a href="/projects/store/store.html">
+                                        <div
+                                            title="E|Shop"
+                                            class="img-container"
+                                        >
+                                            <img src="images/eshop.jpg" /></div
+                                    ></a>
+                                </div>
+                                <div class="column">
+                                    <a href="/projects/sah/sah.html">
+                                        <div
+                                            title="Chess"
+                                            class="img-container"
+                                        >
+                                            <img src="images/Chess.jpg" /></div
+                                    ></a>
+                                    <a href="/projects/cards/actress.html">
+                                        <div
+                                            title="Actress"
+                                            class="img-container"
+                                        >
+                                            <img src="images/actress1.jpg" />
+                                        </div>
                                     </a>
                                     <a href="/projects/countrry/index.html">
-                                        <div title="Country" class="img-container">
+                                        <div
+                                            title="Country"
+                                            class="img-container"
+                                        >
                                             <img src="images/country2.jpg" />
                                         </div>
-                                            </a>
-                            </div>
-
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                </section>
+                    <section id="Skills" class="start-description about">
+                        <hr />
+                        <h2>Skills</h2>
+                        <h3>LATEST WORKS</h3>
+                        <div class="container-skills">
+                            <div class="card-skills">
+                                <h4>HTML</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 70%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 70%"
+                                >
+                                    <h5>70%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>GIT</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 80%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 80%"
+                                >
+                                    <h5>80%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>CSS</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 50%"
+                                >
+                                    <h5>50%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>SQL</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 90%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 85%"
+                                >
+                                    <h5>90%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>GCP/ BigQuery</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 85%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 85%"
+                                >
+                                    <h5>85%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>Docker</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 40%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 40%"
+                                >
+                                    <h5>40%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>Looker Studio</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 95%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 90%"
+                                >
+                                    <h5>95%</h5>
+                                </div>
+                            </div>
+                            <div class="card-skills">
+                                <h4>Linux</h4>
+                                <div class="progress-container">
+                                    <div
+                                        class="progress-bar"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="progress-bar-percent"
+                                    style="margin-left: 50%"
+                                >
+                                    <h5>50%</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="contact" class="start-description about">
+                        <hr />
+                        <h2>Contact</h2>
+                        <h3>Let's talk</h3>
+                        <form action="">
+                            <div class="container-contact">
+                                <div class="container-contact-card">
+                                    <div class="input-container">
+                                        <input
+                                            type="text"
+                                            id="full-name"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="full-name"
+                                            >FULL NAME <span>*</span></label
+                                        >
+                                    </div>
+                                    <div class="input-container">
+                                        <input
+                                            type="email"
+                                            id="email-address"
+                                            placeholder=" "
+                                            required
+                                        />
+                                        <label for="email-address"
+                                            >EMAIL ADDRESS<span>*</span></label
+                                        >
+                                    </div>
+                                    <div class="input-container">
+                                        <textarea
+                                            id="comment-text"
+                                            placeholder=" "
+                                            required
+                                        ></textarea>
+                                        <label for="comment-text"
+                                            >MESSAGE<span>*</span></label
+                                        >
+                                    </div>
 
-                <section id="Skills" class="start-description about">
-                    <hr>
-                    <h2>Skills</h2>
-                    <h3>LATEST WORKS</h3>
-                    <div class="container-skills">
-                        <div class="card-skills">
-                            <h4>HTML</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 70%;"></div>
+                                    <div>
+                                        <input
+                                            type="submit"
+                                            value="SEND MESSAGE"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="container-contact-card-desc">
+                                    <div class="desc-me-name">
+                                        <h3 class="name">Chicu Roman</h3>
+                                        <h3>FRONTEND STUDENT</h3>
+                                    </div>
+                                    <div class="desc-me-inline">
+                                        <div class="about-me">
+                                            <div class="about-me-desc">
+                                                <h5>AGE:</h5>
+                                                <h5>ADDRESS:</h5>
+                                                <h5>PHONE:</h5>
+                                                <h5>EMAIL:</h5>
+                                            </div>
+                                            <div
+                                                class="about-me-desc about-me-desc-title"
+                                            >
+                                                <h5>29</h5>
+                                                <h5>MOLDOVA, Chisinau</h5>
+                                                <h5>37368889505</h5>
+                                                <h5>romachicu@gmail.com</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="desc-me-desc">
+                                        <h4 class="sign">ChicuRoman</h4>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="progress-bar-percent" style="margin-left: 70%;"><h5>70%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>GIT</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 80%;"></div>
-                            </div>
-                            <div class="progress-bar-percent"  style="margin-left: 80%;"><h5>80%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>CSS</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 50%;"></div>
-                            </div>
-                            <div class="progress-bar-percent"  style="margin-left: 50%;"><h5>50%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>SQL</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 90%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" style="margin-left: 85%;"><h5>90%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>GCP/ BigQuery</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 85%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" style="margin-left: 85%;"><h5>85%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>Docker</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 40%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" style="margin-left: 40%;"><h5>40%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>Looker Studio</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 95%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" style="margin-left: 90%;"><h5>95%</h5></div>
-                        </div>
-                        <div class="card-skills">
-                            <h4>Linux</h4>
-                            <div class="progress-container">
-                                <div class="progress-bar" style="width: 50%;"></div>
-                            </div>
-                            <div class="progress-bar-percent" style="margin-left: 50%;"><h5>50%</h5></div>
-                        </div>
-                    </div>
-                </section>    
-                <section id="contact" class="start-description about">
-                    <hr>
-                    <h2>Contact</h2>
-                    <h3>Let's talk</h3>
-                    <form action="">
-                 <div class="container-contact">
-                    <div class="container-contact-card">
-                        <div class="input-container">
-                            <input type="text" id="full-name" placeholder=" " required>
-                            <label for="full-name">FULL NAME <span>*</span></label>
+                        </form>
+                    </section>
 
-                        </div>  
-                        <div class="input-container">
-                            <input type="email" id="email-address" placeholder=" " required>
-                            <label for="email-address">EMAIL ADDRESS<span>*</span></label>
-                        </div>  
-                        <div class="input-container">
-                            <textarea  id="comment-text" placeholder=" " required></textarea>
-                            <label for="comment-text">MESSAGE<span>*</span></label>
-                        </div> 
-
-                            <div>
-                           <input type="submit" value="SEND MESSAGE">
-                            </div>
-
-
-                    </div>
-                      <div class="container-contact-card-desc">
-                            <div class="desc-me-name"><h3 class="name">Chicu Roman</h3><h3>FRONTEND STUDENT</h3></div>
-                            <div class="desc-me-inline "><div class="about-me">
-                                <div class="about-me-desc"><h5>AGE:</h5> <h5>ADDRESS:</h5> <h5>PHONE:</h5><h5>EMAIL:</h5></div>
-                                <div class="about-me-desc about-me-desc-title"><h5>29</h5><h5>MOLDOVA, Chisinau</h5><h5>37368889505</h5><H5>romachicu@gmail.com</H5></div>
-                            </div></div>
-                            <div class="desc-me-desc"><h4 class="sign">ChicuRoman</h4></div>
-                    </div>
-                 </div> 
-                </form>  
-                </section>    
-
-                <section id="footer" class="start-description about">
-
-                    <footer class="footer-about-me">
-                        <p><a href="https://www.linkedin.com/in/chicu-roman-757b22171"><img  class="footer-about-me-logo" src="styles/icon/linkedin-app-white-icon.svg"></a></p>
-                          <p><a href="https://www.facebook.com/chicu.roman"><img  class="footer-about-me-logo" src="styles/icon/facebook-app-round-white-icon.svg"></a></p>
-                           <p><a href="https://www.instagram.com/romachicu/"><img  class="footer-about-me-logo" src="styles/icon/instagram-white-icon.svg"></a></p>
-                            <p><a href="https://github.com/romachicu/"><img  class="footer-about-me-logo" src="styles/icon/pngegg.png"></a></p>
-                           <p><a href="https://github.com/romachicu/"><img  class="footer-about-me-logo" src="styles/icon/codewars.png"></a></p>
-                      </footer>
-                </section>
+                    <section id="footer" class="start-description about">
+                        <footer class="footer-about-me">
+                            <p>
+                                <a
+                                    href="https://www.linkedin.com/in/chicu-roman-757b22171"
+                                    ><img
+                                        class="footer-about-me-logo"
+                                        src="styles/icon/linkedin-app-white-icon.svg"
+                                /></a>
+                            </p>
+                            <p>
+                                <a href="https://www.facebook.com/chicu.roman"
+                                    ><img
+                                        class="footer-about-me-logo"
+                                        src="styles/icon/facebook-app-round-white-icon.svg"
+                                /></a>
+                            </p>
+                            <p>
+                                <a href="https://www.instagram.com/romachicu/"
+                                    ><img
+                                        class="footer-about-me-logo"
+                                        src="styles/icon/instagram-white-icon.svg"
+                                /></a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/romachicu/"
+                                    ><img
+                                        class="footer-about-me-logo"
+                                        src="styles/icon/pngegg.png"
+                                /></a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/romachicu/"
+                                    ><img
+                                        class="footer-about-me-logo"
+                                        src="styles/icon/codewars.png"
+                                /></a>
+                            </p>
+                        </footer>
+                    </section>
+                </div>
             </div>
-        </div>
+        </section>
+        <script>
+            function toggleMenu(sectionId) {
+                var dropdown = document.getElementById("menu-open");
 
+                // Dacă există un ID de secțiune, navighează și închide meniul
+                if (sectionId) {
+                    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+                    dropdown.classList.remove("menu-active"); // Închide meniul după navigare
+                } else {
+                    // Dacă nu este specificat un ID, pur și simplu închide meniul
+                    dropdown.classList.remove("menu-active");
+                }
+            }
 
-    </section>
-
-</body>
+        </script>
+    </body>
 </html>
