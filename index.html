@@ -653,7 +653,7 @@
                         <hr />
                         <h2>Contact</h2>
                         <h3>Let's talk</h3>
-                        <form action="">
+                        <form id="comment" action="#contact" method="post">
                             <div class="container-contact">
                                 <div class="container-contact-card">
                                     <div class="input-container">
@@ -663,9 +663,8 @@
                                             placeholder=" "
                                             required
                                         />
-                                        <label for="full-name"
-                                            >FULL NAME <span>*</span></label
-                                        >
+                                        <label for="full-name">FULL NAME <span>*</span></label>
+                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
                                     <div class="input-container">
                                         <input
@@ -674,9 +673,8 @@
                                             placeholder=" "
                                             required
                                         />
-                                        <label for="email-address"
-                                            >EMAIL ADDRESS<span>*</span></label
-                                        >
+                                        <label for="email-address">EMAIL ADDRESS<span>*</span></label>
+                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
                                     <div class="input-container">
                                         <textarea
@@ -684,16 +682,11 @@
                                             placeholder=" "
                                             required
                                         ></textarea>
-                                        <label for="comment-text"
-                                            >MESSAGE<span>*</span></label
-                                        >
+                                        <label for="comment-text">MESSAGE<span>*</span></label>
+                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
-
                                     <div>
-                                        <input
-                                            type="submit"
-                                            value="SEND MESSAGE"
-                                        />
+                                        <input type="submit" value="SEND MESSAGE" />
                                     </div>
                                 </div>
                                 <div class="container-contact-card-desc">
@@ -709,9 +702,7 @@
                                                 <h5>PHONE:</h5>
                                                 <h5>EMAIL:</h5>
                                             </div>
-                                            <div
-                                                class="about-me-desc about-me-desc-title"
-                                            >
+                                            <div class="about-me-desc about-me-desc-title">
                                                 <h5>29</h5>
                                                 <h5>MOLDOVA, Chisinau</h5>
                                                 <h5>37368889505</h5>
@@ -725,6 +716,7 @@
                                 </div>
                             </div>
                         </form>
+                        
                     </section>
 
                     <section id="footer" class="start-description about">
@@ -770,20 +762,13 @@
                 </div>
             </div>
         </section>
-        <script>
-            function toggleMenu(sectionId) {
-                var dropdown = document.getElementById("menu-open");
+        <script src="menu..js">
 
-                // Dacă există un ID de secțiune, navighează și închide meniul
-                if (sectionId) {
-                    document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
-                    dropdown.classList.remove("menu-active"); // Închide meniul după navigare
-                } else {
-                    // Dacă nu este specificat un ID, pur și simplu închide meniul
-                    dropdown.classList.remove("menu-active");
-                }
-            }
+
 
         </script>
+<script src="validation_form.js"></script>
+
+  
     </body>
 </html>

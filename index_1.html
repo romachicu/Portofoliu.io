@@ -1,152 +1,136 @@
-<!doctype html>
+<!--<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>My Portofoliu</title>
-  </head>
-  <header>
-    <h1>My Portofoliu</h1>
-    <nav>
-      <a href="about.html" target="_blank">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Project</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <main>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
-            Sunt un Web Developer pasionat și dedicat, cu o experiență solidă în
-          dezvoltarea și întreținerea aplicațiilor web moderne. Am abilități
-          avansate în HTML, CSS, JavaScript și diverse framework-uri front-end
-          și back-end, precum React, Angular, Node.js și Django. Experiența mea
-          include lucrul cu baze de date SQL și NoSQL, precum și integrarea
-          API-urilor RESTful și GraphQL.
-        </p>
-        <h3>Here is a list of my <strong>hard skills:</strong></h3>
-        <ul>
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
-          <li>Google Console</li>
-          <li>BgQuery</li>
-          <li>Python</li>
-        </ul>
-        <h3>Here is a list of my <strong>soft skills:</strong></h3>
-        <ul>
-          <li>3 limbi vorbite: Româna, Engleza, Rusa</li>
-          <li>Managementul timpului</li>
-          <li>Gândire creativă</li>
-          <li>Învăţare continuă</li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>Project</h2>
-        <p>
-          Am lucrat la diverse proiecte web, dezvoltând aplicații interactive și
-          platforme online care au avut un impact semnificativ asupra
-          utilizatorilor. Aceste proiecte au demonstrat abilitățile mele în
-          dezvoltarea front-end și back-end, utilizând o varietate de tehnologii
-          moderne și abordări inovatoare.
-        </p>
-        <table>
-          <th>Travel Journal App</th>
-          <th>Culinary Recipes App</th>
-          <th>Portofoliu Personal</th>
-          <tr>
-            <td>
-              <a href="projects/country/index.html">
-                <img
-                  src="images/visit.jpg"
-                  ref="portofoliu/country/index.html#home"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-            <td>
-              <a href="projects/reteta/index.html">
-                <img
-                  src="images/Culinary.jpg"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-            <td>
-              <a href="projects/portofoliu/index.html">
-                <img
-                  src="images/portofoliu.jpg"
-                  alt="website-project1"
-                  width="300px"
-                  height="200px"
-              /></a>
-            </td>
-          </tr>
-        </table>
-      </section>
-      <section id="contact">
-        <h2>Contacte</h2>
-        <p>
-          Am lucrat la diverse proiecte web, dezvoltând aplicații interactive și
-          platforme online care au avut un impact semnificativ asupra
-          utilizatorilor. Aceste proiecte au demonstrat abilitățile mele în
-          dezvoltarea front-end și back-end, utilizând o varietate de tehnologii
-          moderne și abordări inovatoare.
-        </p>
-        <p>
-          <img src="icon/avatar.svg" alt="person icon" width="30" />Chicu Roman,
-          +373 68889505
-        </p>
-        <p>
-          <img src="icon/location.svg" alt="pin icon" width="30" />Chişinău,
-          Moldova
-        </p>
-        <p>
-          <img
-            src="icon/mobile.svg"
-            alt="email icon"
-            width="30"
-          />romachicu@gmail.com
-        </p>
-        <form>
-          <h3>Scrieţi-mi un mesaj:</h3>
-          <input name="name" placeholder="Numele*" required />
-          <input
-            name="tel"
-            type="number"
-            placeholder="Tel:*"
-            required
-            minlength="9"
-          />
-          <input name="email" type="email" placeholder="Email*" required />
-          <br /><br />
-          <lable for="motiv">De ce doriţi să mă contactaţi:</lable><br /><br />
-          <select name="motiv">
-            <option value="">--Selectaţi o opţiune--</option>
-            <option value="interviu">Interviu</option>
-            <option value="job offer">Job Offer</option></select
-          ><br /><br />
-          <textarea
-            name="mesaj"
-            placeholder="Detalii"
-            cols="60"
-            rows="5"
-          ></textarea>
-          <br /><br />
-          <button>Trimite</button>
-        </form>
-      </section>
-    </main>
-  </header>
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
 
-  <footer>
-    <hr />
-    &copy; 2024 My Portfolio. All rights reserved. @
-    <a href="index.html">Roman Chicu</a>
-  </footer>
-  <body></body>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 150vw;
+            height: 150vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        .show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">
+            <img src="icon/menu.svg" alt="Menu Icon" width="50" height="50">
+        </button>
+        <div id="dropdownMenu" class="dropdown-content">
+            <a href="#about" onclick="toggleMenu('about')">About</a>
+            <a href="#experience" onclick="toggleMenu('experience')">Experience</a>
+            <a href="#education" onclick="toggleMenu('education')">Education</a>
+            <a href="#projects" onclick="toggleMenu('projects')">Project</a>
+            <a href="#contact" onclick="toggleMenu('contact')">Contact</a>
+            <a href="cv/CV_Chicu_Roman_up.pdf" onclick="toggleMenu()">Download CV</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        function toggleMenu(sectionId) {
+            var dropdown = document.getElementById("dropdownMenu");
+
+            if (sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+            }
+
+            // Închide meniul după ce ai făcut clic
+            dropdown.classList.remove("show");
+        }
+
+        // Închide meniul când utilizatorul face clic în afara acestuia
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdown = document.getElementById("dropdownMenu");
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <form id="comment" action="#contact" method="post">
+        <div>
+            <input type="text" id="full-name" placeholder="Full Name" required />
+            <small></small> <!-- Spațiu pentru mesajul de eroare -->
+        </div>
+        <div>
+            <input type="email" id="email-address" placeholder="Email Address" required />
+            <small></small> <!-- Spațiu pentru mesajul de eroare -->
+        </div>
+        <div>
+            <textarea id="comment-text" placeholder="Comment" required></textarea>
+            <small></small> <!-- Spațiu pentru mesajul de eroare -->
+        </div>
+        <input type="submit" value="SEND MESSAGE" />
+    </form>
+
+    <script src="menu.js"></script> <!-- Asigură-te că acest script se află la finalul body-ului -->
+   
+</body>
 </html>

@@ -873,70 +873,115 @@ input[type=email]:focus {
         display: none;
     }
 
-    /* Stiluri pentru dropdown și meniul care să apară pe toată pagina */
-
-    .lii {
-        display: none;
-        /* Ascunde meniul implicit */
-    }
-
-    .lii.menu-active {
-        display: block;
-        /* Afișează meniul când este activ */
-    }
-
-
-
-
-
+    .show {display: block;}
     .dropdown-content {
-        display: none;
-        position: fixed;
-        /* Acoperă toată pagina */
+        display: none; /* Ascuns inițial */
+        position: fixed; /* Asigură poziția fixă a meniului */
         top: 0;
         left: 0;
         width: 150vw;
         height: 150vh;
         background-color: rgba(0, 0, 0, 0.9);
-        /* Fundal semi-transparent */
         z-index: 9998;
-        /* Asigură-te că e deasupra */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    
+    .dropdown-content.show {
+        display: flex; /* Afișează meniul când este activ */
+    }
+    
     .dropdown-content a {
         color: white;
         padding: 20px;
         font-size: 24px;
         text-decoration: none;
     }
-
+    
     .dropdown-content a:hover {
         background-color: #f1f1f1;
         color: black;
     }
-
-
-    .menu-active .dropdown-content {
-        display: flex;
-    }
-
+    
     .dropbtn {
-        dislay: flex;
+        display: flex;
         justify-content: center;
         align-items: center;
-        align-self: center;
-        align-content: center;
         margin: 0 auto;
     }
-
+    
     .dropbtn img {
         width: 50px;
         height: 50px;
+        position: relative;
+        top: -13.5px;
     }
+    
 
+.menu-active {
+    display: block;
+    /* Afișează meniul când este activ */
+}
 
+.dropdown-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150vw;
+    height: 150vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9998;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.menu-active .dropdown-content {
+    display: flex;
+}
+
+.dropbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.dropbtn img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -13.5px;
+}
+
+    header {
+        background-color: #222831;
+        position: fixed;
+        width: 90%;
+        margin: 10px 5%;
+        z-index: 999;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        border-bottom: 2px solid red;
+    
+    }
+    .input-container > small {
+        color: red;
+    }
 
 }
