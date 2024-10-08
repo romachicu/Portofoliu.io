@@ -41,22 +41,38 @@ body {
     background-color: #f9f9f9;
 
 }
-
 .image-profile {
+    position: relative; /* Necesare pentru a poziționa overlay-ul */
+    width: 100%;
+    height: 100%;
     background-image: url('images/my_photo_back_and_white_avatar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--active_profile_color);
     background-blend-mode: multiply;
-
-
 }
 
+.image-profile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/my_photo_back_and_white-avatar.png');
+    background-repeat: no-repeat;
+    background-size: contain; /* Asigură-te că imaginea se potrivește în interiorul div-ului */
+    background-position: center;
+    transition: filter 0.3s ease; /* Tranziție pentru umbra */
+    z-index: 1000; /* Overlay deasupra */
+}
+
+.image-profile:hover::after {
+    filter: drop-shadow(0 0 10px rgba(250, 113, 33, 0.925)); /* Umbră la hover */
+}
 
 
 
