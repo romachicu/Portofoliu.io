@@ -73,7 +73,7 @@ body {
 }
 
 .image-profile:hover::after {
-    filter: drop-shadow(0 0 10px rgba(250, 113, 33, 0.925)); /* Umbră la hover */
+    filter: drop-shadow(0 0 20px rgba(250, 113, 33, 0.925)); /* Umbră la hover */
 }
 
 
