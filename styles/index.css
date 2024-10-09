@@ -41,8 +41,10 @@ body {
     background-color: #f9f9f9;
 
 }
+
 .image-profile {
-    position: relative; /* Necesare pentru a poziționa overlay-ul */
+    position: relative;
+    /* Necesare pentru a poziționa overlay-ul */
     width: 100%;
     height: 100%;
     background-image: url('images/my_photo_back_and_white_avatar.jpg');
@@ -54,6 +56,7 @@ body {
     background-color: var(--active_profile_color);
     background-blend-mode: multiply;
 }
+
 /*https://codepen.io/savnac/pen/YRxgmJ */
 .image-profile::after {
     content: '';
@@ -68,12 +71,15 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
-    transition: filter 0.3s ease; /* Tranziție pentru umbra */
-    z-index: 1000; /* Overlay deasupra */
+    transition: filter 0.3s ease;
+    /* Tranziție pentru umbra */
+    z-index: 1000;
+    /* Overlay deasupra */
 }
 
 .image-profile:hover::after {
-    filter: drop-shadow(0 0 20px rgba(250, 113, 33, 0.925)); /* Umbră la hover */
+    filter: drop-shadow(0 0 20px rgba(250, 113, 33, 0.925));
+    /* Umbră la hover */
 }
 
 
@@ -630,7 +636,7 @@ input[type=email]:focus {
 
 }
 
-.input-container > small {
+.input-container>small {
     color: red;
 }
 
@@ -674,6 +680,7 @@ input[type=email]:focus {
         height: auto;
         width: 100%;
 
+
     }
 
     .container .card:not(.fixed-card) {
@@ -684,7 +691,7 @@ input[type=email]:focus {
 
     .image-profile {
         width: 100%;
-        height: 200px;
+        height: 700px;
     }
 
     .h-title {
@@ -893,104 +900,8 @@ input[type=email]:focus {
         display: none;
     }
 
-    .show {display: block;}
-    .dropdown-content {
-        display: none; /* Ascuns inițial */
-        position: fixed; /* Asigură poziția fixă a meniului */
-        top: 0;
-        left: 0;
-        width: 150vw;
-        height: 150vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 9998;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .dropdown-content.show {
-        display: flex; /* Afișează meniul când este activ */
-    }
-    
-    .dropdown-content a {
-        color: white;
-        padding: 20px;
-        font-size: 24px;
-        text-decoration: none;
-    }
-    
-    .dropdown-content a:hover {
-        background-color: #f1f1f1;
-        color: black;
-    }
-    
-    .dropbtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    
-    .dropbtn img {
-        width: 50px;
-        height: 50px;
-        position: relative;
-        top: -13.5px;
-    }
-    
-
-.menu-active {
-    display: block;
-    /* Afișează meniul când este activ */
-}
-
-.dropdown-content {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 150vw;
-    height: 150vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9998;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-.menu-active .dropdown-content {
-    display: flex;
-}
-
-.dropbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.dropbtn img {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    top: -13.5px;
-}
-
     header {
-        background-color: #222831;
+
         position: fixed;
         width: 90%;
         margin: 10px 5%;
@@ -998,9 +909,126 @@ input[type=email]:focus {
         border-radius: 50px;
         border: 2px solid #fff;
         border-bottom: 2px solid red;
-    
+
     }
-    .input-container > small {
+
+    li a,
+    .dropdown .dropbtn {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+        /* Asigură că border-ul este vizibil la hover */
+        transition: border-bottom 0.3s ease;
+    }
+
+    li a:hover {
+        border-bottom: 2px solid red;
+        /* Aplică border-bottom la hover */
+    }
+
+    .show {
+        display: block;
+    }
+
+    .menu-content {
+        display: none;
+        /* Ascuns inițial */
+        position: fixed;
+        /* Asigură poziția fixă a meniului */
+        top: 0;
+        left: 0;
+        width: 150vw;
+        height: 150vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9998;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+
+    }
+
+    .menu-content.show {
+        display: flex;
+        /* Afișează meniul când este activ */
+        ;
+    }
+
+    .menu-content a {
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        text-decoration: none;
+        position: relative;
+        /* Asigură că elementul este poziționat */
+        z-index: 1;
+        /* Asigură că link-urile sunt deasupra altor elemente */
+    }
+
+
+    .menu-content a:hover {
+        border-bottom: 5px solid red;
+        background-color: #fff;
+        color: #000;
+        width: 100%;
+        display: flex;
+    }
+
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    li a,
+    .dropdown .dropbtn {
+        background-color: transparent;
+        border-bottom: 2px solid transparent;
+        /* Border inițial transparent */
+        transition: border-bottom 0.3s ease;
+        /* Definim tranziția */
+    }
+
+    li a:hover {
+
+        border-bottom: 20px solid red;
+
+    }
+
+
+    .dropbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+    .dropbtn img {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        top: -13.5px;
+    }
+
+
+    .menu-active {
+        display: block;
+        /* Afișează meniul când este activ */
+
+    }
+
+
+
+    .input-container>small {
         color: red;
     }
 

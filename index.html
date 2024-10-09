@@ -64,22 +64,46 @@
                         </li>
                     </ul>
                     <ul id="menu-open">
-                        <li class="dropdown lii" >
-                            <a href="javascript:void(0)" class="dropbtn" onclick="openMenu()">
-                                <img src="icon/menu.svg" alt="Menu Icon">
+                        <li class="dropdown lii">
+                            <a
+                                href="javascript:void(0)"
+                                class="dropbtn"
+                                onclick="openMenu()"
+                            >
+                                <img src="icon/menu.svg" alt="Menu Icon" />
                             </a>
-                            <div class="dropdown-content">
-                                <a href="javascript:void(0)" onclick="toggleMenu('about')">About</a>
-                                <a href="javascript:void(0)" onclick="toggleMenu('experience')">Experience</a>
-                                <a href="javascript:void(0)" onclick="toggleMenu('education')">Education</a>
-                                <a href="javascript:void(0)" onclick="toggleMenu('projects')">Project</a>
-                                <a href="javascript:void(0)" onclick="toggleMenu('contact')">Contact</a>
-                                <a href="javascript:void(0)" onclick="toggleMenu()">Download CV</a>
+                            <div class="menu-content">
+                                <a
+                                    href="#about"
+                                    onclick="navigateAndCloseMenu('about')"
+                                    >About</a
+                                >
+                                <a
+                                    href="#experience"
+                                    onclick="navigateAndCloseMenu('experience')"
+                                    >Experience</a
+                                >
+                                <a
+                                    href="#education"
+                                    onclick="navigateAndCloseMenu('education')"
+                                    >Education</a
+                                >
+                                <a
+                                    href="#projects"
+                                    onclick="navigateAndCloseMenu('projects')"
+                                    >Project</a
+                                >
+                                <a
+                                    href="#contact"
+                                    onclick="navigateAndCloseMenu('contact')"
+                                    >Contact</a
+                                >
+                                <a href="/cv/CV_Chicu_Roman_up.pdf"
+                                    >Download CV</a
+                                >
                             </div>
                         </li>
                     </ul>
-
-
                 </div>
             </nav>
         </header>
@@ -663,8 +687,11 @@
                                             placeholder=" "
                                             required
                                         />
-                                        <label for="full-name">FULL NAME <span>*</span></label>
-                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
+                                        <label for="full-name"
+                                            >FULL NAME <span>*</span></label
+                                        >
+                                        <small></small>
+                                        <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
                                     <div class="input-container">
                                         <input
@@ -673,8 +700,11 @@
                                             placeholder=" "
                                             required
                                         />
-                                        <label for="email-address">EMAIL ADDRESS<span>*</span></label>
-                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
+                                        <label for="email-address"
+                                            >EMAIL ADDRESS<span>*</span></label
+                                        >
+                                        <small></small>
+                                        <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
                                     <div class="input-container">
                                         <textarea
@@ -682,11 +712,17 @@
                                             placeholder=" "
                                             required
                                         ></textarea>
-                                        <label for="comment-text">MESSAGE<span>*</span></label>
-                                        <small></small> <!-- Spațiu pentru mesajul de eroare -->
+                                        <label for="comment-text"
+                                            >MESSAGE<span>*</span></label
+                                        >
+                                        <small></small>
+                                        <!-- Spațiu pentru mesajul de eroare -->
                                     </div>
                                     <div>
-                                        <input type="submit" value="SEND MESSAGE" />
+                                        <input
+                                            type="submit"
+                                            value="SEND MESSAGE"
+                                        />
                                     </div>
                                 </div>
                                 <div class="container-contact-card-desc">
@@ -702,7 +738,9 @@
                                                 <h5>PHONE:</h5>
                                                 <h5>EMAIL:</h5>
                                             </div>
-                                            <div class="about-me-desc about-me-desc-title">
+                                            <div
+                                                class="about-me-desc about-me-desc-title"
+                                            >
                                                 <h5>29</h5>
                                                 <h5>MOLDOVA, Chisinau</h5>
                                                 <h5>37368889505</h5>
@@ -716,7 +754,6 @@
                                 </div>
                             </div>
                         </form>
-                        
                     </section>
 
                     <section id="footer" class="start-description about">
@@ -762,13 +799,7 @@
                 </div>
             </div>
         </section>
-        <script src="menu..js">
-
-
-
-        </script>
-<script src="validation_form.js"></script>
-
-  
+        <script src="menu.js"></script>
+        <script src="validation_form.js"></script>
     </body>
 </html>
