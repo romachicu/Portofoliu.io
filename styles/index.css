@@ -1032,4 +1032,7 @@ input[type=email]:focus {
         color: red;
     }
 
+    p {
+        margin-left: 10px;
+    }
 }
