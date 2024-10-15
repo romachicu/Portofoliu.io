@@ -642,7 +642,7 @@ input[type=email]:focus {
 
 @font-face {
     font-family: 'Creattion Demo';
-    src: url('/fonts/Creattion_Demo.otf') format('opentype');
+    src: url('fonts/Creattion_Demo.otf') format('opentype');
 }
 
 .sign {
@@ -970,7 +970,9 @@ input[type=email]:focus {
     }
 
 
-    .menu-content a:hover, .menu-content a:active,  .menu-content a:focus {
+    .menu-content a:hover,
+    .menu-content a:active,
+    .menu-content a:focus {
         border-bottom: 5px solid red;
         background-color: #fff;
         color: #000;
