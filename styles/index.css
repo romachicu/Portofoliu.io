@@ -11,6 +11,19 @@
 */
 
 
+@font-face {
+    font-family: 'Creattion Demo';
+    src: url('/fonts/Creattion_Demo.otf') format('opentype');
+}
+
+.sign {
+    font-family: 'Creattion Demo', sans-serif;
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+
+
 :root {
     --active_profile_color: #68e0cf;
 }
@@ -656,12 +669,25 @@ input[type=email]:focus {
 }
 
 */
-
+/*
 .sign {
     font-family: "Dancing Script", cursive;
     font-size: 50px;
     margin-left: 30px;
+}*/
+
+
+@font-face {
+    font-family: 'Creattion Demo';
+    src: url('/fonts/Creattion_Demo.otf') format('opentype');
 }
+
+.sign {
+    font-family: 'Creattion Demo', sans-serif;
+    font-size: 50px;
+    margin-left: 30px;
+}
+
 
 .footer-about-me {
     display: flex;
@@ -1049,4 +1075,174 @@ input[type=email]:focus {
     p {
         margin-left: 10px;
     }
+}
+
+@media only screen and (min-width:800px) and (max-width:1280px) {
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .container {
+        display: flex;
+
+        position: relative;
+        /* Adăugat pentru a permite poziționarea absolută a titlului */
+    }
+
+    .card {
+        width: 400px;
+        padding: 20px;
+        position: relative;
+    }
+
+    .fixed-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+         width: 400px;
+        z-index: 1;
+        background-color: #f9f9f9;
+
+    }
+
+    .image-profile {
+        position: relative;
+        /* Necesare pentru a poziționa overlay-ul */
+        width: 100%;
+        height: 100%;
+        background-image: url('images/my_photo_back_and_white_avatar.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        background-color: var(--active_profile_color);
+        background-blend-mode: multiply;
+    }
+
+    /*https://codepen.io/savnac/pen/YRxgmJ */
+    .image-profile::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/my_photo_back_and_white-avatar.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        transition: filter 0.3s ease;
+        /* Tranziție pentru umbra */
+        z-index: 1000;
+        /* Overlay deasupra */
+    }
+
+    .image-profile:hover::after {
+        filter: drop-shadow(0 0 20px rgba(250, 113, 33, 0.925));
+        /* Umbră la hover */
+    }
+
+
+
+    .container .card:not(.fixed-card) {
+        margin-left: 50%;
+        padding-left: 20px;
+    }
+    .about-me  {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        
+    }
+
+    .about-me-description {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .experience-container {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+
+    }
+
+    .experience-card {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .container-contact-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .container-contact-card input[type="submit"] {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .container-contact-card-desc {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #585d65;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    h3,
+    h2 {
+        margin: 10%;
+    }
+
+    .rotation-title-experience {
+        transform: rotate(90deg);
+        color: #68e0cf;
+        /*  margin-right: 20px;
+        margin-top: 25px;
+       */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        height: 20px;
+        width: 100px;
+
+        font-size: 14px;
+        top: 0;
+    }
+
+    .experience-card {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+
 }
