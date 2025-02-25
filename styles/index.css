@@ -48,7 +48,7 @@ body {
 
 .card {
     width: 50%;
-    padding: 20px;
+  /*  padding: 20px; */
     position: relative;
 }
 
@@ -408,7 +408,7 @@ hr {
 }
 
 .container-project {
-    width: 80%;
+    width: 90%; 
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -519,6 +519,9 @@ img:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+#contact {
+    padding: 5%;
 }
 
 .container-contact-card {
@@ -695,12 +698,14 @@ input[type=email]:focus {
     width: 100%;
     border-top: 2px solid #fff;
     height: 50px;
+    padding-right: 5%;
 }
 
 .footer-about-me-logo {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    width: 45px;
+    height: 45px;
+    margin: 10px 5px;
+    
 }
 
 @media (max-width: 800px) {
@@ -767,6 +772,29 @@ input[type=email]:focus {
     nav {
         display: none; 
     }*/
+
+    #contact {
+        padding: 0;
+    }
+    .container-project {
+        width: calc(90% + 12px); 
+        position: relative;
+        overflow: hidden;
+       
+        
+    }
+
+
+    .column {
+        float: left;
+        width: 50%;  
+    }
+
+    .column img {
+        margin-top: 12px;
+        display: block;
+        position: relative;
+    }
     .about-me {
         display: flex;
         justify-content: start;
@@ -799,9 +827,10 @@ input[type=email]:focus {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        width: 80%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 10% auto;
         gap: 40px;
+        right: 10px;
     }
 
     .container-contact-card {
@@ -1095,7 +1124,7 @@ input[type=email]:focus {
 
     .card {
         width: 400px;
-        padding: 20px;
+        /*padding: 20px; */
         position: relative;
     }
 
@@ -1180,7 +1209,7 @@ input[type=email]:focus {
     }
 
     .experience-card {
-        margin-top: 50px;
+        margin-top: 40px;
         margin-left: 0;
     }
 
@@ -1190,7 +1219,7 @@ input[type=email]:focus {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         gap: 40px;
     }
